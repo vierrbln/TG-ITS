@@ -1,0 +1,23 @@
+[OPTIONS]
+Compatibility=1.1 or later
+Compiled file=TG-ITS.chm
+Contents file=TG-ITS Table of Contents.hhc
+Default Font=Arial,9,0
+Display compile progress=Yes
+Error log file=log.log
+Full-text search=Yes
+Index file=TG-ITS.hhk
+Language=0x407 Deutsch (Deutschland)
+Title=TG-ITS Template Generator
+
+
+[FILES]
+\\.psf\Home\Documents\softwerk4R\Projekte\SW100_SW_ITS\S101_TemplateGenerator.exe\Version_1_7_0_2\resources\HTML_Help\_0_1_wichtige_informationen.htm
+\\.psf\Home\Documents\softwerk4R\Projekte\SW100_SW_ITS\S101_TemplateGenerator.exe\Version_1_7_0_2\resources\HTML_Help\_0_6_options.htm
+\\.psf\Home\Documents\softwerk4R\Projekte\SW100_SW_ITS\S101_TemplateGenerator.exe\Version_1_7_0_2\resources\HTML_Help\_0_2_scan.htm
+\\.psf\Home\Documents\softwerk4R\Projekte\SW100_SW_ITS\S101_TemplateGenerator.exe\Version_1_7_0_2\resources\HTML_Help\_0_3_change.htm
+\\.psf\Home\Documents\softwerk4R\Projekte\SW100_SW_ITS\S101_TemplateGenerator.exe\Version_1_7_0_2\resources\HTML_Help\_0_4_addmanually.htm
+\\.psf\Home\Documents\softwerk4R\Projekte\SW100_SW_ITS\S101_TemplateGenerator.exe\Version_1_7_0_2\resources\HTML_Help\_0_5_export.htm
+
+[INFOTYPES]
+

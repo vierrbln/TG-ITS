@@ -1,0 +1,3434 @@
+[__Header__]
+ProductName = "TestStand"
+ProductVersion = 2.0.1.121
+Version = 143
+Type = "SequenceFile"
+Path = "o:\\\\S101_TemplateGenerator.exe\\\\Version_1_8_0_3\\\\sample.seq"
+ProductVersionString = "2.0.1f1"
+CharEncoding = "SBCS"
+
+[DEF, %OBJECTS]
+SF = SequenceFileData
+Path = PathValue
+Action = StepType
+StepTypeSubstepsArray = Objs
+StepTypeDescFmt = Str
+StepTypeDefNameFmt = Str
+StepTypeMenu = Obj
+TEInf = Obj
+Error = Obj
+CommonResults = Obj
+FlexCStepAdditions = Obj
+FCParameter = FCParameter
+UUT = Obj
+NI_CriticalFailureStackEntry = Obj
+EditSubstep = StepType
+NoneStepAdditions = Obj
+Statement = StepType
+Label = StepType
+Goto = StepType
+NI_Wait = StepType
+PostSubstep = StepType
+StepTypeDescFmt = Str
+StepTypeDefNameFmt = Str
+UUT = Obj
+NI_CriticalFailureStackEntry = Obj
+
+[DEF, SF]
+Seq = Objs
+FileGlobalDefaults = Obj
+ModelFile = "TYPE, Path"
+LoadOpt = Str
+UnloadOpt = Str
+Version = Str
+BatchSync = Num
+SFGlobalsScope = Num
+Type = Num
+ModelOption = Num
+%NAME = "Data"
+
+[SF]
+%LO: Seq = [0]
+%HI: Seq = [6]
+%FLG: ModelFile = 8
+LoadOpt = "UseStepLoadOpt"
+%FLG: LoadOpt = 8
+UnloadOpt = "UseStepUnloadOpt"
+%FLG: UnloadOpt = 8
+Version = "0.0.0.0"
+%FLG: Version = 8
+BatchSync = 1
+%FLG: BatchSync = 8
+%FLG: SFGlobalsScope = 8
+%FLG: Type = 8
+%FLG: ModelOption = 8
+
+[DEF, SF.Seq]
+%[0] = Sequence
+%[1] = Sequence
+%[2] = Sequence
+%[3] = Sequence
+%[4] = Sequence
+%[5] = Sequence
+%[6] = Sequence
+
+[DEF, SF.Seq[0]]
+Parameters = Obj
+Locals = Obj
+Main = Objs
+Setup = Objs
+Cleanup = Objs
+GotoCleanupOnFail = Bool
+RecordResults = Bool
+RTS = Obj
+Requirements = Obj
+%NAME = "MainSequence"
+
+[SF.Seq[0]]
+%FLG: Parameters = 262144
+%LO: Cleanup = [0]
+%HI: Cleanup = [0]
+%FLG: GotoCleanupOnFail = 8
+RecordResults = True
+%FLG: RecordResults = 8
+%FLG: RTS = 262152
+%FLG: Requirements = 4456456
+
+[DEF, SF.Seq[0].Locals]
+ResultList = Objs
+
+[DEF, SF.Seq[0].Locals.ResultList]
+%EPTYPE = TEResult
+
+[DEF, SF.Seq[0].Cleanup]
+%[0] = FlexCStep
+%TYPE: %[0] = "Action"
+
+[SF.Seq[0].Cleanup[0].TS]
+Adapter = "DLL Flexible Prototype Adapter"
+
+[DEF, SF.Seq[0].Cleanup[0].TS]
+SData = "TYPE, FlexCStepAdditions"
+%FLG: SData = 2097152
+
+[SF.Seq[0].Cleanup[0].TS.SData.Call]
+LibPath = "tspan.dll"
+Func = "tspan_DisplayResult"
+%LO: Parms = [0]
+%HI: Parms = [6]
+
+[DEF, SF.Seq[0].Cleanup[0].TS.SData.Call.Parms]
+%[0] = "TYPE, FCParameter"
+%[1] = "TYPE, FCParameter"
+%[2] = "TYPE, FCParameter"
+%[3] = "TYPE, FCParameter"
+%[4] = "TYPE, FCParameter"
+%[5] = "TYPE, FCParameter"
+%[6] = "TYPE, FCParameter"
+
+[SF.Seq[0].Cleanup[0].TS.SData.Call.Parms[0]]
+Name = "Return Value"
+Type = 3
+
+[SF.Seq[0].Cleanup[0].TS.SData.Call.Parms[1]]
+Name = "sequenceContext"
+Type = 4
+ObjType = 1
+ArgVal = "ThisContext"
+
+[SF.Seq[0].Cleanup[0].TS.SData.Call.Parms[2]]
+Name = "resourceID"
+ArgVal = "StationGlobals.TSVP.Panel_ID"
+
+[SF.Seq[0].Cleanup[0].TS.SData.Call.Parms[3]]
+Name = "result"
+ArgVal = "RunState.SequenceFailed"
+
+[SF.Seq[0].Cleanup[0].TS.SData.Call.Parms[4]]
+Name = "errorOccurred"
+NumType = 2
+NumPass = 1
+ArgVal = "Step.Result.Error.Occurred"
+
+[SF.Seq[0].Cleanup[0].TS.SData.Call.Parms[5]]
+Name = "errorCode"
+NumPass = 1
+ArgVal = "Step.Result.Error.Code"
+
+[SF.Seq[0].Cleanup[0].TS.SData.Call.Parms[6]]
+Name = "errorMessage"
+Type = 2
+StrPass = 2
+ArgVal = "Step.Result.Error.Msg"
+
+[DEF, SF.Seq[0].Cleanup[0]]
+%NAME = "Testergebnis speichern"
+
+[DEF, SF.Seq[0].RTS]
+Type = Num
+OptimizeNonReentrantCalls = Bool
+EPNameExpr = Str
+EPEnabledExpr = Str
+EPMenuHint = Str
+EPIgnoreClient = Bool
+EPInitiallyHidden = Bool
+EPCheckToSaveTitledFile = Bool
+ShowEPAlways = Bool
+ShowEPForFileWin = Bool
+ShowEPForExeWin = Bool
+ShowEPForEditorOnly = Bool
+AllowIntExeOfEP = Bool
+CopyStepsOnOverriding = Bool
+Priority = Num
+
+[SF.Seq[0].RTS]
+OptimizeNonReentrantCalls = True
+EPNameExpr = "\"Unnamed Entry Point\""
+EPEnabledExpr = "True"
+EPCheckToSaveTitledFile = True
+ShowEPForFileWin = True
+CopyStepsOnOverriding = True
+Priority = 2953567917
+
+[DEF, SF.Seq[1]]
+Parameters = Obj
+Locals = Obj
+Main = Objs
+Setup = Objs
+Cleanup = Objs
+GotoCleanupOnFail = Bool
+StoreResults = Bool
+RecordResults = Bool
+RTS = Obj
+Requirements = Obj
+%NAME = "PreUUT"
+
+[DEF, SF.Seq[1].Parameters]
+ContinueTesting = Bool
+UUT = "TYPE, UUT"
+
+[SF.Seq[1].Parameters]
+ContinueTesting = True
+%FLG: ContinueTesting = 4
+%FLG: UUT = 132
+
+[SF.Seq[1]]
+%FLG: Parameters = 262144
+%LO: Main = [0]
+%HI: Main = [3]
+%FLG: GotoCleanupOnFail = 8
+StoreResults = True
+%FLG: RecordResults = 8
+%FLG: RTS = 262152
+%FLG: Requirements = 4456456
+%COMMENT Line0001 = "Displays a dialog box in which the operator enters the UUTserial number.  Override this in client file to change or repl"
+%COMMENT Line0002 = "ace this action."
+
+[DEF, SF.Seq[1].Main]
+%[0] = NoneStep
+%TYPE: %[0] = "Label"
+%[1] = NoneStep
+%TYPE: %[1] = "Goto"
+%[2] = NoneStep
+%TYPE: %[2] = "Goto"
+%[3] = NoneStep
+%TYPE: %[3] = "Goto"
+
+[SF.Seq[1].Main[0].TS]
+Adapter = "None Adapter"
+
+[DEF, SF.Seq[1].Main[0].TS]
+SData = "TYPE, NoneStepAdditions"
+%FLG: SData = 2097152
+
+[DEF, SF.Seq[1].Main[0]]
+%NAME = "BEGIN"
+
+[SF.Seq[1].Main[1].TS]
+Adapter = "None Adapter"
+PreCond = "AllOf(StationGlobals.TSVP.TestStarten == False, StationGlobals.TSVP.ProgrammBeenden == False)"
+CustTrueActTarget = "\"BEGIN\""
+
+[DEF, SF.Seq[1].Main[1].TS]
+SData = "TYPE, NoneStepAdditions"
+%FLG: SData = 2097152
+
+[DEF, SF.Seq[1].Main[1]]
+%NAME = "Goto"
+
+[SF.Seq[1].Main[2].TS]
+Adapter = "None Adapter"
+PreCond = "StationGlobals.TSVP.TestStarten == True"
+PostExpr = "Parameters.ContinueTesting = True"
+
+[DEF, SF.Seq[1].Main[2].TS]
+SData = "TYPE, NoneStepAdditions"
+%FLG: SData = 2097152
+
+[DEF, SF.Seq[1].Main[2]]
+%NAME = "Test starten"
+
+[SF.Seq[1].Main[3].TS]
+Adapter = "None Adapter"
+PreCond = "StationGlobals.TSVP.ProgrammBeenden == True"
+PostExpr = "Parameters.ContinueTesting = False"
+
+[DEF, SF.Seq[1].Main[3].TS]
+SData = "TYPE, NoneStepAdditions"
+%FLG: SData = 2097152
+
+[DEF, SF.Seq[1].Main[3]]
+%NAME = "Programm beenden"
+
+[DEF, SF.Seq[1].RTS]
+Type = Num
+EPNameExpr = Str
+EPEnabledExpr = Str
+EPMenuHint = Str
+EPIgnoreClient = Bool
+EPInitiallyHidden = Bool
+EPCheckToSaveTitledFile = Bool
+ShowEPForFileWin = Bool
+ShowEPForExeWin = Bool
+CopyStepsOnOverriding = Bool
+OptimizeNonReentrantCalls = Bool
+Priority = Num
+ShowEPAlways = Bool
+ShowEPForEditorOnly = Bool
+AllowIntExeOfEP = Bool
+
+[SF.Seq[1].RTS]
+EPCheckToSaveTitledFile = True
+ShowEPForFileWin = True
+OptimizeNonReentrantCalls = True
+Priority = 2953567917
+
+[DEF, SF.Seq[2]]
+Parameters = Obj
+Locals = Obj
+Main = Objs
+Setup = Objs
+Cleanup = Objs
+GotoCleanupOnFail = Bool
+StoreResults = Bool
+RecordResults = Bool
+RTS = Obj
+Requirements = Obj
+%NAME = "PostUUT"
+
+[DEF, SF.Seq[2].Parameters]
+Result = Obj
+UUT = "TYPE, UUT"
+
+[SF.Seq[2].Parameters]
+%FLG: Result = 132
+%FLG: UUT = 132
+
+[SF.Seq[2]]
+%FLG: Parameters = 262144
+%LO: Main = [0]
+%HI: Main = [0]
+%FLG: GotoCleanupOnFail = 8
+StoreResults = True
+%FLG: RecordResults = 8
+%FLG: RTS = 262152
+%FLG: Requirements = 4456456
+%COMMENT = "Displays a pass, fail, error, or terminated banner. Override this in client file to change or replace this action."
+
+[DEF, SF.Seq[2].Main]
+%[0] = NoneStep
+%TYPE: %[0] = "Statement"
+
+[SF.Seq[2].Main[0].TS]
+Adapter = "None Adapter"
+PostExpr = "StationGlobals.TSVP.ProgrammBeenden = False,\nStationGlobals.TSVP.TestStarten = False"
+
+[DEF, SF.Seq[2].Main[0].TS]
+SData = "TYPE, NoneStepAdditions"
+%FLG: SData = 2097152
+
+[DEF, SF.Seq[2].Main[0]]
+%NAME = "RunTest-Variablen zurücksetzen"
+
+[DEF, SF.Seq[2].RTS]
+Type = Num
+EPNameExpr = Str
+EPEnabledExpr = Str
+EPMenuHint = Str
+EPIgnoreClient = Bool
+EPInitiallyHidden = Bool
+EPCheckToSaveTitledFile = Bool
+ShowEPForFileWin = Bool
+ShowEPForExeWin = Bool
+CopyStepsOnOverriding = Bool
+OptimizeNonReentrantCalls = Bool
+Priority = Num
+ShowEPAlways = Bool
+ShowEPForEditorOnly = Bool
+AllowIntExeOfEP = Bool
+
+[SF.Seq[2].RTS]
+EPCheckToSaveTitledFile = True
+ShowEPForFileWin = True
+OptimizeNonReentrantCalls = True
+Priority = 2953567917
+
+[DEF, SF.Seq[3]]
+Parameters = Obj
+Locals = Obj
+Main = Objs
+Setup = Objs
+Cleanup = Objs
+GotoCleanupOnFail = Bool
+StoreResults = Bool
+RecordResults = Bool
+RTS = Obj
+Requirements = Obj
+%NAME = "PreUUTLoop"
+
+[SF.Seq[3]]
+%FLG: Parameters = 262144
+%LO: Main = [0]
+%HI: Main = [4]
+%FLG: GotoCleanupOnFail = 8
+StoreResults = True
+%FLG: RecordResults = 8
+%FLG: RTS = 262152
+%FLG: Requirements = 4456456
+%COMMENT Line0001 = "Test UUTs calls this before looping on UUTs.  Is empty in model file.  Override this in the client file to perform an ac"
+%COMMENT Line0002 = "tion before any UUTs are tested."
+
+[DEF, SF.Seq[3].Main]
+%[0] = NoneStep
+%TYPE: %[0] = "NI_Wait"
+%[1] = NoneStep
+%TYPE: %[1] = "Goto"
+%[2] = FlexCStep
+%TYPE: %[2] = "Action"
+%[3] = FlexCStep
+%TYPE: %[3] = "Action"
+%[4] = NoneStep
+%TYPE: %[4] = "Statement"
+
+[SF.Seq[3].Main[0].TS]
+Adapter = "None Adapter"
+
+[DEF, SF.Seq[3].Main[0].TS]
+SData = "TYPE, NoneStepAdditions"
+%FLG: SData = 2097152
+
+[SF.Seq[3].Main[0]]
+TimeExpr = "0.1"
+
+[DEF, SF.Seq[3].Main[0]]
+%NAME = "*M1 Warten"
+
+[SF.Seq[3].Main[1].TS]
+Adapter = "None Adapter"
+PreCond = "StationGlobals.TSVP.SequenceFileLoadComplete == False"
+CustTrueActTarget = "\"*M1 Warten\""
+
+[DEF, SF.Seq[3].Main[1].TS]
+SData = "TYPE, NoneStepAdditions"
+%FLG: SData = 2097152
+
+[DEF, SF.Seq[3].Main[1]]
+%NAME = "Solange StationGlobal.TSVP.SequenceFileLoadComplete == False"
+
+[SF.Seq[3].Main[2].TS]
+Adapter = "DLL Flexible Prototype Adapter"
+
+[DEF, SF.Seq[3].Main[2].TS]
+SData = "TYPE, FlexCStepAdditions"
+%FLG: SData = 2097152
+
+[SF.Seq[3].Main[2].TS.SData.Call]
+LibPath = "tspan.dll"
+Func = "tspan_HideActualPanel"
+%LO: Parms = [0]
+%HI: Parms = [5]
+
+[DEF, SF.Seq[3].Main[2].TS.SData.Call.Parms]
+%[0] = "TYPE, FCParameter"
+%[1] = "TYPE, FCParameter"
+%[2] = "TYPE, FCParameter"
+%[3] = "TYPE, FCParameter"
+%[4] = "TYPE, FCParameter"
+%[5] = "TYPE, FCParameter"
+
+[SF.Seq[3].Main[2].TS.SData.Call.Parms[0]]
+Name = "Return Value"
+Type = 3
+
+[SF.Seq[3].Main[2].TS.SData.Call.Parms[1]]
+Name = "sequenceContext"
+Type = 4
+ObjType = 1
+ArgVal = "ThisContext"
+
+[SF.Seq[3].Main[2].TS.SData.Call.Parms[2]]
+Name = "resourceID"
+ArgVal = "StationGlobals.TSVP.Panel_ID"
+ArgDisplayVal = "StationGlobals.TSVP.Panel_ID"
+
+[SF.Seq[3].Main[2].TS.SData.Call.Parms[3]]
+Name = "errorOccurred"
+NumType = 2
+NumPass = 1
+ArgVal = "Step.Result.Error.Occurred"
+ArgDisplayVal = "Step.Result.Error.Occurred"
+
+[SF.Seq[3].Main[2].TS.SData.Call.Parms[4]]
+Name = "errorCode"
+NumPass = 1
+ArgVal = "Step.Result.Error.Code"
+ArgDisplayVal = "Step.Result.Error.Code"
+
+[SF.Seq[3].Main[2].TS.SData.Call.Parms[5]]
+Name = "errorMessage"
+Type = 2
+StrPass = 2
+ArgVal = "Step.Result.Error.Msg"
+ArgDisplayVal = "Step.Result.Error.Msg"
+
+[DEF, SF.Seq[3].Main[2]]
+%NAME = "Debug Benutzeroberfläche entfernen"
+
+[SF.Seq[3].Main[3].TS]
+Adapter = "DLL Flexible Prototype Adapter"
+
+[DEF, SF.Seq[3].Main[3].TS]
+SData = "TYPE, FlexCStepAdditions"
+%FLG: SData = 2097152
+
+[SF.Seq[3].Main[3].TS.SData.Call]
+LibPath = "tspan.dll"
+Func = "tspan_DisplayOperatorPanel"
+%LO: Parms = [0]
+%HI: Parms = [5]
+
+[DEF, SF.Seq[3].Main[3].TS.SData.Call.Parms]
+%[0] = "TYPE, FCParameter"
+%[1] = "TYPE, FCParameter"
+%[2] = "TYPE, FCParameter"
+%[3] = "TYPE, FCParameter"
+%[4] = "TYPE, FCParameter"
+%[5] = "TYPE, FCParameter"
+
+[SF.Seq[3].Main[3].TS.SData.Call.Parms[0]]
+Name = "Return Value"
+Type = 3
+
+[SF.Seq[3].Main[3].TS.SData.Call.Parms[1]]
+Name = "sequenceContext"
+Type = 4
+ObjType = 1
+ArgVal = "ThisContext"
+
+[SF.Seq[3].Main[3].TS.SData.Call.Parms[2]]
+Name = "resourceID"
+ArgVal = "StationGlobals.TSVP.Panel_ID"
+ArgDisplayVal = "StationGlobals.TSVP.Panel_ID"
+
+[SF.Seq[3].Main[3].TS.SData.Call.Parms[3]]
+Name = "errorOccurred"
+NumType = 2
+NumPass = 1
+ArgVal = "Step.Result.Error.Occurred"
+ArgDisplayVal = "Step.Result.Error.Occurred"
+
+[SF.Seq[3].Main[3].TS.SData.Call.Parms[4]]
+Name = "errorCode"
+NumPass = 1
+ArgVal = "Step.Result.Error.Code"
+ArgDisplayVal = "Step.Result.Error.Code"
+
+[SF.Seq[3].Main[3].TS.SData.Call.Parms[5]]
+Name = "errorMessage"
+Type = 2
+StrPass = 2
+ArgVal = "Step.Result.Error.Msg"
+ArgDisplayVal = "Step.Result.Error.Msg"
+
+[DEF, SF.Seq[3].Main[3]]
+%NAME = "Operator Benutzeroberfläche anzeigen"
+
+[SF.Seq[3].Main[4].TS]
+Adapter = "None Adapter"
+PostExpr = "StationGlobals.TSVP.ProgrammBeenden = False,\nStationGlobals.TSVP.TestStarten = False"
+
+[DEF, SF.Seq[3].Main[4].TS]
+SData = "TYPE, NoneStepAdditions"
+%FLG: SData = 2097152
+
+[DEF, SF.Seq[3].Main[4]]
+%NAME = "Steuervariablen zurücksetzen"
+
+[DEF, SF.Seq[3].RTS]
+Type = Num
+EPNameExpr = Str
+EPEnabledExpr = Str
+EPMenuHint = Str
+EPIgnoreClient = Bool
+EPInitiallyHidden = Bool
+EPCheckToSaveTitledFile = Bool
+ShowEPForFileWin = Bool
+ShowEPForExeWin = Bool
+CopyStepsOnOverriding = Bool
+OptimizeNonReentrantCalls = Bool
+Priority = Num
+ShowEPAlways = Bool
+ShowEPForEditorOnly = Bool
+AllowIntExeOfEP = Bool
+
+[SF.Seq[3].RTS]
+EPCheckToSaveTitledFile = True
+ShowEPForFileWin = True
+OptimizeNonReentrantCalls = True
+Priority = 2953567917
+
+[DEF, SF.Seq[4]]
+Parameters = Obj
+Locals = Obj
+Main = Objs
+Setup = Objs
+Cleanup = Objs
+GotoCleanupOnFail = Bool
+StoreResults = Bool
+RecordResults = Bool
+RTS = Obj
+Requirements = Obj
+%NAME = "PostUUTLoop"
+
+[SF.Seq[4]]
+%FLG: Parameters = 262144
+%LO: Main = [0]
+%HI: Main = [1]
+%FLG: GotoCleanupOnFail = 8
+StoreResults = True
+%FLG: RecordResults = 8
+%FLG: RTS = 262152
+%FLG: Requirements = 4456456
+%COMMENT Line0001 = "Test UUTs calls this after looping on UUTs.  Is empty in model file.  Override this in the client file to perform an act"
+%COMMENT Line0002 = "ion after all UUTs are tested."
+
+[DEF, SF.Seq[4].Main]
+%[0] = FlexCStep
+%TYPE: %[0] = "Action"
+%[1] = FlexCStep
+%TYPE: %[1] = "Action"
+
+[SF.Seq[4].Main[0].TS]
+Adapter = "DLL Flexible Prototype Adapter"
+
+[DEF, SF.Seq[4].Main[0].TS]
+SData = "TYPE, FlexCStepAdditions"
+%FLG: SData = 2097152
+
+[SF.Seq[4].Main[0].TS.SData.Call]
+LibPath = "tspan.dll"
+Func = "tspan_HideActualPanel"
+%LO: Parms = [0]
+%HI: Parms = [5]
+
+[DEF, SF.Seq[4].Main[0].TS.SData.Call.Parms]
+%[0] = "TYPE, FCParameter"
+%[1] = "TYPE, FCParameter"
+%[2] = "TYPE, FCParameter"
+%[3] = "TYPE, FCParameter"
+%[4] = "TYPE, FCParameter"
+%[5] = "TYPE, FCParameter"
+
+[SF.Seq[4].Main[0].TS.SData.Call.Parms[0]]
+Name = "Return Value"
+Type = 3
+
+[SF.Seq[4].Main[0].TS.SData.Call.Parms[1]]
+Name = "sequenceContext"
+Type = 4
+ObjType = 1
+ArgVal = "ThisContext"
+
+[SF.Seq[4].Main[0].TS.SData.Call.Parms[2]]
+Name = "resourceID"
+ArgVal = "StationGlobals.TSVP.Panel_ID"
+ArgDisplayVal = "StationGlobals.TSVP.Panel_ID"
+
+[SF.Seq[4].Main[0].TS.SData.Call.Parms[3]]
+Name = "errorOccurred"
+NumType = 2
+NumPass = 1
+ArgVal = "Step.Result.Error.Occurred"
+ArgDisplayVal = "Step.Result.Error.Occurred"
+
+[SF.Seq[4].Main[0].TS.SData.Call.Parms[4]]
+Name = "errorCode"
+NumPass = 1
+ArgVal = "Step.Result.Error.Code"
+ArgDisplayVal = "Step.Result.Error.Code"
+
+[SF.Seq[4].Main[0].TS.SData.Call.Parms[5]]
+Name = "errorMessage"
+Type = 2
+StrPass = 2
+ArgVal = "Step.Result.Error.Msg"
+ArgDisplayVal = "Step.Result.Error.Msg"
+
+[DEF, SF.Seq[4].Main[0]]
+%NAME = "Operator Benutzeroberfläche entfernen"
+
+[SF.Seq[4].Main[1].TS]
+Adapter = "DLL Flexible Prototype Adapter"
+
+[DEF, SF.Seq[4].Main[1].TS]
+SData = "TYPE, FlexCStepAdditions"
+%FLG: SData = 2097152
+
+[SF.Seq[4].Main[1].TS.SData.Call]
+LibPath = "tspan.dll"
+Func = "tspan_DisplayDebugPanel"
+%LO: Parms = [0]
+%HI: Parms = [5]
+
+[DEF, SF.Seq[4].Main[1].TS.SData.Call.Parms]
+%[0] = "TYPE, FCParameter"
+%[1] = "TYPE, FCParameter"
+%[2] = "TYPE, FCParameter"
+%[3] = "TYPE, FCParameter"
+%[4] = "TYPE, FCParameter"
+%[5] = "TYPE, FCParameter"
+
+[SF.Seq[4].Main[1].TS.SData.Call.Parms[0]]
+Name = "Return Value"
+Type = 3
+
+[SF.Seq[4].Main[1].TS.SData.Call.Parms[1]]
+Name = "sequenceContext"
+Type = 4
+ObjType = 1
+ArgVal = "ThisContext"
+
+[SF.Seq[4].Main[1].TS.SData.Call.Parms[2]]
+Name = "resourceID"
+ArgVal = "StationGlobals.TSVP.Panel_ID"
+
+[SF.Seq[4].Main[1].TS.SData.Call.Parms[3]]
+Name = "errorOccurred"
+NumType = 2
+NumPass = 1
+ArgVal = "Step.Result.Error.Occurred"
+
+[SF.Seq[4].Main[1].TS.SData.Call.Parms[4]]
+Name = "errorCode"
+NumPass = 1
+ArgVal = "Step.Result.Error.Code"
+
+[SF.Seq[4].Main[1].TS.SData.Call.Parms[5]]
+Name = "errorMessage"
+Type = 2
+StrPass = 2
+ArgVal = "Step.Result.Error.Msg"
+
+[DEF, SF.Seq[4].Main[1]]
+%NAME = "Debug Benutzeroberfläche anzeigen"
+
+[DEF, SF.Seq[4].RTS]
+Type = Num
+EPNameExpr = Str
+EPEnabledExpr = Str
+EPMenuHint = Str
+EPIgnoreClient = Bool
+EPInitiallyHidden = Bool
+EPCheckToSaveTitledFile = Bool
+ShowEPForFileWin = Bool
+ShowEPForExeWin = Bool
+CopyStepsOnOverriding = Bool
+OptimizeNonReentrantCalls = Bool
+Priority = Num
+ShowEPAlways = Bool
+ShowEPForEditorOnly = Bool
+AllowIntExeOfEP = Bool
+
+[SF.Seq[4].RTS]
+EPCheckToSaveTitledFile = True
+ShowEPForFileWin = True
+OptimizeNonReentrantCalls = True
+Priority = 2953567917
+
+[DEF, SF.Seq[5]]
+Parameters = Obj
+Locals = Obj
+Main = Objs
+Setup = Objs
+Cleanup = Objs
+GotoCleanupOnFail = Bool
+StoreResults = Bool
+RecordResults = Bool
+RTS = Obj
+Requirements = Obj
+%NAME = "SequenceFileLoad"
+
+[SF.Seq[5]]
+%FLG: Parameters = 262144
+%LO: Main = [0]
+%HI: Main = [18]
+%LO: Cleanup = [0]
+%HI: Cleanup = [1]
+%FLG: GotoCleanupOnFail = 8
+StoreResults = True
+RecordResults = True
+%FLG: RecordResults = 8
+%FLG: RTS = 262152
+%FLG: Requirements = 4456456
+
+[DEF, SF.Seq[5].Locals]
+ResultList = Objs
+
+[DEF, SF.Seq[5].Locals.ResultList]
+%EPTYPE = TEResult
+
+[DEF, SF.Seq[5].Main]
+%[0] = FlexCStep
+%TYPE: %[0] = "Action"
+%[1] = NoneStep
+%TYPE: %[1] = "Statement"
+%[2] = NoneStep
+%TYPE: %[2] = "Statement"
+%[3] = NoneStep
+%TYPE: %[3] = "Statement"
+%[4] = NoneStep
+%TYPE: %[4] = "Statement"
+%[5] = FlexCStep
+%TYPE: %[5] = "Action"
+%[6] = FlexCStep
+%TYPE: %[6] = "Action"
+%[7] = FlexCStep
+%TYPE: %[7] = "Action"
+%[8] = FlexCStep
+%TYPE: %[8] = "Action"
+%[9] = FlexCStep
+%TYPE: %[9] = "Action"
+%[10] = FlexCStep
+%TYPE: %[10] = "Action"
+%[11] = FlexCStep
+%TYPE: %[11] = "Action"
+%[12] = FlexCStep
+%TYPE: %[12] = "Action"
+%[13] = FlexCStep
+%TYPE: %[13] = "Action"
+%[14] = FlexCStep
+%TYPE: %[14] = "Action"
+%[15] = FlexCStep
+%TYPE: %[15] = "Action"
+%[16] = FlexCStep
+%TYPE: %[16] = "Action"
+%[17] = FlexCStep
+%TYPE: %[17] = "Action"
+%[18] = NoneStep
+%TYPE: %[18] = "Statement"
+
+[SF.Seq[5].Main[0].TS]
+Adapter = "DLL Flexible Prototype Adapter"
+
+[DEF, SF.Seq[5].Main[0].TS]
+SData = "TYPE, FlexCStepAdditions"
+%FLG: SData = 2097152
+
+[SF.Seq[5].Main[0].TS.SData.Call]
+LibPath = "ts_support_32.dll"
+Func = "tss_CreateStationGlobals"
+%LO: Parms = [0]
+%HI: Parms = [15]
+
+[DEF, SF.Seq[5].Main[0].TS.SData.Call.Parms]
+%[0] = "TYPE, FCParameter"
+%[1] = "TYPE, FCParameter"
+%[2] = "TYPE, FCParameter"
+%[3] = "TYPE, FCParameter"
+%[4] = "TYPE, FCParameter"
+%[5] = "TYPE, FCParameter"
+%[6] = "TYPE, FCParameter"
+%[7] = "TYPE, FCParameter"
+%[8] = "TYPE, FCParameter"
+%[9] = "TYPE, FCParameter"
+%[10] = "TYPE, FCParameter"
+%[11] = "TYPE, FCParameter"
+%[12] = "TYPE, FCParameter"
+%[13] = "TYPE, FCParameter"
+%[14] = "TYPE, FCParameter"
+%[15] = "TYPE, FCParameter"
+
+[SF.Seq[5].Main[0].TS.SData.Call.Parms[0]]
+Name = "Return Value"
+Type = 3
+
+[SF.Seq[5].Main[0].TS.SData.Call.Parms[1]]
+Name = "sequenceContext"
+Type = 4
+ObjType = 1
+ArgVal = "ThisContext"
+
+[SF.Seq[5].Main[0].TS.SData.Call.Parms[2]]
+Name = "nameOfPhyIni"
+Type = 2
+StrPass = 2
+ArgVal = "\"\""
+
+[SF.Seq[5].Main[0].TS.SData.Call.Parms[3]]
+Name = "nameOfAppIni"
+Type = 2
+StrPass = 2
+ArgVal = "\"o:\\\\S101_TemplateGenerator.exe\\\\Version_1_8_0_3\\\\application.ini\""
+
+[SF.Seq[5].Main[0].TS.SData.Call.Parms[4]]
+Name = "benchName"
+Type = 2
+StrPass = 2
+ArgVal = "\"Sample1\""
+
+[SF.Seq[5].Main[0].TS.SData.Call.Parms[5]]
+Name = "countOfPSAM"
+ArgVal = "1"
+
+[SF.Seq[5].Main[0].TS.SData.Call.Parms[6]]
+Name = "countOfPICT"
+ArgVal = "1"
+
+[SF.Seq[5].Main[0].TS.SData.Call.Parms[7]]
+Name = "countOfPFG"
+ArgVal = "0"
+
+[SF.Seq[5].Main[0].TS.SData.Call.Parms[8]]
+Name = "countOfPDFT"
+ArgVal = "0"
+
+[SF.Seq[5].Main[0].TS.SData.Call.Parms[9]]
+Name = "countOfPAM"
+ArgVal = "0"
+
+[SF.Seq[5].Main[0].TS.SData.Call.Parms[10]]
+Name = "countOfPHDT"
+ArgVal = "0"
+
+[SF.Seq[5].Main[0].TS.SData.Call.Parms[11]]
+Name = "countOfPSU"
+ArgVal = "1"
+
+[SF.Seq[5].Main[0].TS.SData.Call.Parms[12]]
+Name = "countOfPIO2"
+ArgVal = "0"
+
+[SF.Seq[5].Main[0].TS.SData.Call.Parms[13]]
+Name = "errorOccurred"
+NumType = 2
+NumPass = 1
+ArgVal = "Step.Result.Error.Occurred"
+
+[SF.Seq[5].Main[0].TS.SData.Call.Parms[14]]
+Name = "errorCode"
+NumPass = 1
+ArgVal = "Step.Result.Error.Code"
+
+[SF.Seq[5].Main[0].TS.SData.Call.Parms[15]]
+Name = "errorMessage"
+Type = 2
+StrPass = 2
+ArgVal = "Step.Result.Error.Msg"
+
+[DEF, SF.Seq[5].Main[0]]
+%NAME = "StationGlobals erzeugen"
+
+[SF.Seq[5].Main[1].TS]
+Adapter = "None Adapter"
+PostExpr = "StationGlobals.TSVP.SequenceFileLoadComplete = False"
+
+[DEF, SF.Seq[5].Main[1].TS]
+SData = "TYPE, NoneStepAdditions"
+%FLG: SData = 2097152
+
+[DEF, SF.Seq[5].Main[1]]
+%NAME = "StationGlobal setzen"
+
+[SF.Seq[5].Main[2].TS]
+Adapter = "None Adapter"
+PostExpr = "StationGlobals.TSVP.PhysicalIniFile = \"\""
+
+[DEF, SF.Seq[5].Main[2].TS]
+SData = "TYPE, NoneStepAdditions"
+%FLG: SData = 2097152
+
+[DEF, SF.Seq[5].Main[2]]
+%NAME = "Physical-INI-Datei  festlegen"
+
+[SF.Seq[5].Main[3].TS]
+Adapter = "None Adapter"
+PostExpr = "StationGlobals.TSVP.ApplicationIniFile = \"o:\\\\S101_TemplateGenerator.exe\\\\Version_1_8_0_3\\\\application.ini\""
+
+[DEF, SF.Seq[5].Main[3].TS]
+SData = "TYPE, NoneStepAdditions"
+%FLG: SData = 2097152
+
+[DEF, SF.Seq[5].Main[3]]
+%NAME = "Application-INI-Datei  festlegen"
+
+[SF.Seq[5].Main[4].TS]
+Adapter = "None Adapter"
+PostExpr = "StationGlobals.TSVP.BenchName1 = \"Sample1\""
+
+[DEF, SF.Seq[5].Main[4].TS]
+SData = "TYPE, NoneStepAdditions"
+%FLG: SData = 2097152
+
+[DEF, SF.Seq[5].Main[4]]
+%NAME = "Bench festlegen"
+
+[SF.Seq[5].Main[5].TS]
+Adapter = "DLL Flexible Prototype Adapter"
+
+[DEF, SF.Seq[5].Main[5].TS]
+SData = "TYPE, FlexCStepAdditions"
+%FLG: SData = 2097152
+
+[SF.Seq[5].Main[5].TS.SData.Call]
+LibPath = "ts_support_32.dll"
+Func = "tss_ShowInitPanel"
+%LO: Parms = [0]
+%HI: Parms = [5]
+
+[DEF, SF.Seq[5].Main[5].TS.SData.Call.Parms]
+%[0] = "TYPE, FCParameter"
+%[1] = "TYPE, FCParameter"
+%[2] = "TYPE, FCParameter"
+%[3] = "TYPE, FCParameter"
+%[4] = "TYPE, FCParameter"
+%[5] = "TYPE, FCParameter"
+
+[SF.Seq[5].Main[5].TS.SData.Call.Parms[0]]
+Name = "Return Value"
+Type = 3
+
+[SF.Seq[5].Main[5].TS.SData.Call.Parms[1]]
+Name = "sequenceContext"
+Type = 4
+ObjType = 1
+ArgVal = "ThisContext"
+
+[SF.Seq[5].Main[5].TS.SData.Call.Parms[2]]
+Name = "alwaysOntop"
+ArgVal = "True"
+
+[SF.Seq[5].Main[5].TS.SData.Call.Parms[3]]
+Name = "errorOccurred"
+NumType = 2
+NumPass = 1
+ArgVal = "Step.Result.Error.Occurred"
+
+[SF.Seq[5].Main[5].TS.SData.Call.Parms[4]]
+Name = "errorCode"
+NumPass = 1
+ArgVal = "Step.Result.Error.Code"
+
+[SF.Seq[5].Main[5].TS.SData.Call.Parms[5]]
+Name = "errorMessage"
+Type = 2
+StrPass = 2
+ArgVal = "Step.Result.Error.Msg"
+
+[DEF, SF.Seq[5].Main[5]]
+%NAME = "Init Panel anzeigen"
+
+[SF.Seq[5].Main[6].TS]
+Adapter = "DLL Flexible Prototype Adapter"
+
+[DEF, SF.Seq[5].Main[6].TS]
+SData = "TYPE, FlexCStepAdditions"
+%FLG: SData = 2097152
+
+[SF.Seq[5].Main[6].TS.SData.Call]
+LibPath = "ts_support_32.dll"
+Func = "tss_SetTextforInitPanel"
+%LO: Parms = [0]
+%HI: Parms = [6]
+
+[DEF, SF.Seq[5].Main[6].TS.SData.Call.Parms]
+%[0] = "TYPE, FCParameter"
+%[1] = "TYPE, FCParameter"
+%[2] = "TYPE, FCParameter"
+%[3] = "TYPE, FCParameter"
+%[4] = "TYPE, FCParameter"
+%[5] = "TYPE, FCParameter"
+%[6] = "TYPE, FCParameter"
+
+[SF.Seq[5].Main[6].TS.SData.Call.Parms[0]]
+Name = "Return Value"
+Type = 3
+
+[SF.Seq[5].Main[6].TS.SData.Call.Parms[1]]
+Name = "sequenceContext"
+Type = 4
+ObjType = 1
+ArgVal = "ThisContext"
+
+[SF.Seq[5].Main[6].TS.SData.Call.Parms[2]]
+Name = "text"
+Type = 2
+StrPass = 2
+ArgVal = "\"Resource-Manager\""
+
+[SF.Seq[5].Main[6].TS.SData.Call.Parms[3]]
+Name = "alwaysOntop"
+ArgVal = "True"
+
+[SF.Seq[5].Main[6].TS.SData.Call.Parms[4]]
+Name = "errorOccurred"
+NumType = 2
+NumPass = 1
+ArgVal = "Step.Result.Error.Occurred"
+
+[SF.Seq[5].Main[6].TS.SData.Call.Parms[5]]
+Name = "errorCode"
+NumPass = 1
+ArgVal = "Step.Result.Error.Code"
+
+[SF.Seq[5].Main[6].TS.SData.Call.Parms[6]]
+Name = "errorMessage"
+Type = 2
+StrPass = 2
+ArgVal = "Step.Result.Error.Msg"
+
+[DEF, SF.Seq[5].Main[6]]
+%NAME = "Text aktualisieren"
+
+[SF.Seq[5].Main[7].TS]
+Adapter = "DLL Flexible Prototype Adapter"
+
+[DEF, SF.Seq[5].Main[7].TS]
+SData = "TYPE, FlexCStepAdditions"
+%FLG: SData = 2097152
+
+[SF.Seq[5].Main[7].TS.SData.Call]
+LibPath = "resmgr.dll"
+Func = "RESMGR_Setup"
+%LO: Parms = [0]
+%HI: Parms = [6]
+
+[DEF, SF.Seq[5].Main[7].TS.SData.Call.Parms]
+%[0] = "TYPE, FCParameter"
+%[1] = "TYPE, FCParameter"
+%[2] = "TYPE, FCParameter"
+%[3] = "TYPE, FCParameter"
+%[4] = "TYPE, FCParameter"
+%[5] = "TYPE, FCParameter"
+%[6] = "TYPE, FCParameter"
+
+[SF.Seq[5].Main[7].TS.SData.Call.Parms[0]]
+Name = "Return Value"
+Type = 3
+
+[SF.Seq[5].Main[7].TS.SData.Call.Parms[1]]
+Name = "sequenceContext"
+Type = 4
+ObjType = 1
+ArgVal = "ThisContext"
+
+[SF.Seq[5].Main[7].TS.SData.Call.Parms[2]]
+Name = "physicalIniFileName"
+Type = 2
+ArgVal = "StationGlobals.TSVP.PhysicalIniFile"
+
+[SF.Seq[5].Main[7].TS.SData.Call.Parms[3]]
+Name = "applicationIniFileName"
+Type = 2
+ArgVal = "StationGlobals.TSVP.ApplicationIniFile"
+
+[SF.Seq[5].Main[7].TS.SData.Call.Parms[4]]
+Name = "errorOccurred"
+NumType = 2
+NumPass = 1
+ArgVal = "Step.Result.Error.Occurred"
+
+[SF.Seq[5].Main[7].TS.SData.Call.Parms[5]]
+Name = "errorCode"
+NumPass = 1
+ArgVal = "Step.Result.Error.Code"
+
+[SF.Seq[5].Main[7].TS.SData.Call.Parms[6]]
+Name = "errorMessage"
+Type = 2
+StrPass = 2
+ArgVal = "Step.Result.Error.Msg"
+
+[DEF, SF.Seq[5].Main[7]]
+%NAME = "Resource-Manager laden"
+
+[SF.Seq[5].Main[8].TS]
+Adapter = "DLL Flexible Prototype Adapter"
+
+[DEF, SF.Seq[5].Main[8].TS]
+SData = "TYPE, FlexCStepAdditions"
+%FLG: SData = 2097152
+
+[SF.Seq[5].Main[8].TS.SData.Call]
+LibPath = "ts_support_32.dll"
+Func = "tss_SetTextforInitPanel"
+%LO: Parms = [0]
+%HI: Parms = [6]
+
+[DEF, SF.Seq[5].Main[8].TS.SData.Call.Parms]
+%[0] = "TYPE, FCParameter"
+%[1] = "TYPE, FCParameter"
+%[2] = "TYPE, FCParameter"
+%[3] = "TYPE, FCParameter"
+%[4] = "TYPE, FCParameter"
+%[5] = "TYPE, FCParameter"
+%[6] = "TYPE, FCParameter"
+
+[SF.Seq[5].Main[8].TS.SData.Call.Parms[0]]
+Name = "Return Value"
+Type = 3
+
+[SF.Seq[5].Main[8].TS.SData.Call.Parms[1]]
+Name = "sequenceContext"
+Type = 4
+ObjType = 1
+ArgVal = "ThisContext"
+
+[SF.Seq[5].Main[8].TS.SData.Call.Parms[2]]
+Name = "text"
+Type = 2
+StrPass = 2
+ArgVal = "\"Switch-Manager\""
+
+[SF.Seq[5].Main[8].TS.SData.Call.Parms[3]]
+Name = "alwaysOntop"
+ArgVal = "True"
+
+[SF.Seq[5].Main[8].TS.SData.Call.Parms[4]]
+Name = "errorOccurred"
+NumType = 2
+NumPass = 1
+ArgVal = "Step.Result.Error.Occurred"
+
+[SF.Seq[5].Main[8].TS.SData.Call.Parms[5]]
+Name = "errorCode"
+NumPass = 1
+ArgVal = "Step.Result.Error.Code"
+
+[SF.Seq[5].Main[8].TS.SData.Call.Parms[6]]
+Name = "errorMessage"
+Type = 2
+StrPass = 2
+ArgVal = "Step.Result.Error.Msg"
+
+[DEF, SF.Seq[5].Main[8]]
+%NAME = "Text aktualisieren"
+
+[SF.Seq[5].Main[9].TS]
+Adapter = "DLL Flexible Prototype Adapter"
+
+[DEF, SF.Seq[5].Main[9].TS]
+SData = "TYPE, FlexCStepAdditions"
+%FLG: SData = 2097152
+
+[SF.Seq[5].Main[9].TS.SData.Call]
+LibPath = "swmgr.dll"
+Func = "SWMGR_Setup"
+%LO: Parms = [0]
+%HI: Parms = [6]
+
+[DEF, SF.Seq[5].Main[9].TS.SData.Call.Parms]
+%[0] = "TYPE, FCParameter"
+%[1] = "TYPE, FCParameter"
+%[2] = "TYPE, FCParameter"
+%[3] = "TYPE, FCParameter"
+%[4] = "TYPE, FCParameter"
+%[5] = "TYPE, FCParameter"
+%[6] = "TYPE, FCParameter"
+
+[SF.Seq[5].Main[9].TS.SData.Call.Parms[0]]
+Name = "Return Value"
+Type = 3
+
+[SF.Seq[5].Main[9].TS.SData.Call.Parms[1]]
+Name = "sequenceContext"
+Type = 4
+ObjType = 1
+ArgVal = "ThisContext"
+
+[SF.Seq[5].Main[9].TS.SData.Call.Parms[2]]
+Name = "benchName"
+Type = 2
+ArgVal = "StationGlobals.TSVP.BenchName1"
+
+[SF.Seq[5].Main[9].TS.SData.Call.Parms[3]]
+Name = "resourceID"
+NumPass = 1
+ArgVal = "StationGlobals.TSVP.swmgr_ID"
+
+[SF.Seq[5].Main[9].TS.SData.Call.Parms[4]]
+Name = "errorOccurred"
+NumType = 2
+NumPass = 1
+ArgVal = "Step.Result.Error.Occurred"
+
+[SF.Seq[5].Main[9].TS.SData.Call.Parms[5]]
+Name = "errorCode"
+NumPass = 1
+ArgVal = "Step.Result.Error.Code"
+
+[SF.Seq[5].Main[9].TS.SData.Call.Parms[6]]
+Name = "errorMessage"
+Type = 2
+StrPass = 2
+ArgVal = "Step.Result.Error.Msg"
+
+[DEF, SF.Seq[5].Main[9]]
+%NAME = "Switch-Manager initialisieren"
+
+[SF.Seq[5].Main[10].TS]
+Adapter = "DLL Flexible Prototype Adapter"
+
+[DEF, SF.Seq[5].Main[10].TS]
+SData = "TYPE, FlexCStepAdditions"
+%FLG: SData = 2097152
+
+[SF.Seq[5].Main[10].TS.SData.Call]
+LibPath = "ts_support_32.dll"
+Func = "tss_SetTextforInitPanel"
+%LO: Parms = [0]
+%HI: Parms = [6]
+
+[DEF, SF.Seq[5].Main[10].TS.SData.Call.Parms]
+%[0] = "TYPE, FCParameter"
+%[1] = "TYPE, FCParameter"
+%[2] = "TYPE, FCParameter"
+%[3] = "TYPE, FCParameter"
+%[4] = "TYPE, FCParameter"
+%[5] = "TYPE, FCParameter"
+%[6] = "TYPE, FCParameter"
+
+[SF.Seq[5].Main[10].TS.SData.Call.Parms[0]]
+Name = "Return Value"
+Type = 3
+
+[SF.Seq[5].Main[10].TS.SData.Call.Parms[1]]
+Name = "sequenceContext"
+Type = 4
+ObjType = 1
+ArgVal = "ThisContext"
+
+[SF.Seq[5].Main[10].TS.SData.Call.Parms[2]]
+Name = "text"
+Type = 2
+StrPass = 2
+ArgVal = "\"Digitalmultimeter\""
+
+[SF.Seq[5].Main[10].TS.SData.Call.Parms[3]]
+Name = "alwaysOntop"
+ArgVal = "True"
+
+[SF.Seq[5].Main[10].TS.SData.Call.Parms[4]]
+Name = "errorOccurred"
+NumType = 2
+NumPass = 1
+ArgVal = "Step.Result.Error.Occurred"
+
+[SF.Seq[5].Main[10].TS.SData.Call.Parms[5]]
+Name = "errorCode"
+NumPass = 1
+ArgVal = "Step.Result.Error.Code"
+
+[SF.Seq[5].Main[10].TS.SData.Call.Parms[6]]
+Name = "errorMessage"
+Type = 2
+StrPass = 2
+ArgVal = "Step.Result.Error.Msg"
+
+[DEF, SF.Seq[5].Main[10]]
+%NAME = "Text aktualisieren"
+
+[SF.Seq[5].Main[11].TS]
+Adapter = "DLL Flexible Prototype Adapter"
+
+[DEF, SF.Seq[5].Main[11].TS]
+SData = "TYPE, FlexCStepAdditions"
+%FLG: SData = 2097152
+
+[SF.Seq[5].Main[11].TS.SData.Call]
+LibPath = "dmm.dll"
+Func = "DMM_Setup"
+%LO: Parms = [0]
+%HI: Parms = [6]
+
+[DEF, SF.Seq[5].Main[11].TS.SData.Call.Parms]
+%[0] = "TYPE, FCParameter"
+%[1] = "TYPE, FCParameter"
+%[2] = "TYPE, FCParameter"
+%[3] = "TYPE, FCParameter"
+%[4] = "TYPE, FCParameter"
+%[5] = "TYPE, FCParameter"
+%[6] = "TYPE, FCParameter"
+
+[SF.Seq[5].Main[11].TS.SData.Call.Parms[0]]
+Name = "Return Value"
+Type = 3
+
+[SF.Seq[5].Main[11].TS.SData.Call.Parms[1]]
+Name = "sequenceContext"
+Type = 4
+ObjType = 1
+ArgVal = "ThisContext"
+
+[SF.Seq[5].Main[11].TS.SData.Call.Parms[2]]
+Name = "benchName"
+Type = 2
+ArgVal = "StationGlobals.TSVP.BenchName1"
+
+[SF.Seq[5].Main[11].TS.SData.Call.Parms[3]]
+Name = "resourceID"
+NumPass = 1
+ArgVal = "StationGlobals.TSVP.dmm_ID"
+
+[SF.Seq[5].Main[11].TS.SData.Call.Parms[4]]
+Name = "errorOccurred"
+NumType = 2
+NumPass = 1
+ArgVal = "Step.Result.Error.Occurred"
+
+[SF.Seq[5].Main[11].TS.SData.Call.Parms[5]]
+Name = "errorCode"
+NumPass = 1
+ArgVal = "Step.Result.Error.Code"
+
+[SF.Seq[5].Main[11].TS.SData.Call.Parms[6]]
+Name = "errorMessage"
+Type = 2
+StrPass = 2
+ArgVal = "Step.Result.Error.Msg"
+
+[DEF, SF.Seq[5].Main[11]]
+%NAME = "Digitalmultimeter initialisieren"
+
+[SF.Seq[5].Main[12].TS]
+Adapter = "DLL Flexible Prototype Adapter"
+
+[DEF, SF.Seq[5].Main[12].TS]
+SData = "TYPE, FlexCStepAdditions"
+%FLG: SData = 2097152
+
+[SF.Seq[5].Main[12].TS.SData.Call]
+LibPath = "ts_support_32.dll"
+Func = "tss_SetTextforInitPanel"
+%LO: Parms = [0]
+%HI: Parms = [6]
+
+[DEF, SF.Seq[5].Main[12].TS.SData.Call.Parms]
+%[0] = "TYPE, FCParameter"
+%[1] = "TYPE, FCParameter"
+%[2] = "TYPE, FCParameter"
+%[3] = "TYPE, FCParameter"
+%[4] = "TYPE, FCParameter"
+%[5] = "TYPE, FCParameter"
+%[6] = "TYPE, FCParameter"
+
+[SF.Seq[5].Main[12].TS.SData.Call.Parms[0]]
+Name = "Return Value"
+Type = 3
+
+[SF.Seq[5].Main[12].TS.SData.Call.Parms[1]]
+Name = "sequenceContext"
+Type = 4
+ObjType = 1
+ArgVal = "ThisContext"
+
+[SF.Seq[5].Main[12].TS.SData.Call.Parms[2]]
+Name = "text"
+Type = 2
+StrPass = 2
+ArgVal = "\"ICT Erweiterungsmodul\""
+
+[SF.Seq[5].Main[12].TS.SData.Call.Parms[3]]
+Name = "alwaysOntop"
+ArgVal = "True"
+
+[SF.Seq[5].Main[12].TS.SData.Call.Parms[4]]
+Name = "errorOccurred"
+NumType = 2
+NumPass = 1
+ArgVal = "Step.Result.Error.Occurred"
+
+[SF.Seq[5].Main[12].TS.SData.Call.Parms[5]]
+Name = "errorCode"
+NumPass = 1
+ArgVal = "Step.Result.Error.Code"
+
+[SF.Seq[5].Main[12].TS.SData.Call.Parms[6]]
+Name = "errorMessage"
+Type = 2
+StrPass = 2
+ArgVal = "Step.Result.Error.Msg"
+
+[DEF, SF.Seq[5].Main[12]]
+%NAME = "Text aktualisieren"
+
+[SF.Seq[5].Main[13].TS]
+Adapter = "DLL Flexible Prototype Adapter"
+
+[DEF, SF.Seq[5].Main[13].TS]
+SData = "TYPE, FlexCStepAdditions"
+%FLG: SData = 2097152
+
+[SF.Seq[5].Main[13].TS.SData.Call]
+LibPath = "ict.dll"
+Func = "ICT_Setup"
+%LO: Parms = [0]
+%HI: Parms = [6]
+
+[DEF, SF.Seq[5].Main[13].TS.SData.Call.Parms]
+%[0] = "TYPE, FCParameter"
+%[1] = "TYPE, FCParameter"
+%[2] = "TYPE, FCParameter"
+%[3] = "TYPE, FCParameter"
+%[4] = "TYPE, FCParameter"
+%[5] = "TYPE, FCParameter"
+%[6] = "TYPE, FCParameter"
+
+[SF.Seq[5].Main[13].TS.SData.Call.Parms[0]]
+Name = "Return Value"
+Type = 3
+
+[SF.Seq[5].Main[13].TS.SData.Call.Parms[1]]
+Name = "sequenceContext"
+Type = 4
+ObjType = 1
+ArgVal = "ThisContext"
+
+[SF.Seq[5].Main[13].TS.SData.Call.Parms[2]]
+Name = "benchName"
+Type = 2
+ArgVal = "StationGlobals.TSVP.BenchName1"
+
+[SF.Seq[5].Main[13].TS.SData.Call.Parms[3]]
+Name = "resourceID"
+NumPass = 1
+ArgVal = "StationGlobals.TSVP.ict_ID"
+
+[SF.Seq[5].Main[13].TS.SData.Call.Parms[4]]
+Name = "errorOccurred"
+NumType = 2
+NumPass = 1
+ArgVal = "Step.Result.Error.Occurred"
+
+[SF.Seq[5].Main[13].TS.SData.Call.Parms[5]]
+Name = "errorCode"
+NumPass = 1
+ArgVal = "Step.Result.Error.Code"
+
+[SF.Seq[5].Main[13].TS.SData.Call.Parms[6]]
+Name = "errorMessage"
+Type = 2
+StrPass = 2
+ArgVal = "Step.Result.Error.Msg"
+
+[DEF, SF.Seq[5].Main[13]]
+%NAME = "ICT Erweiterungsmodul initialisieren"
+
+[SF.Seq[5].Main[14].TS]
+Adapter = "DLL Flexible Prototype Adapter"
+
+[DEF, SF.Seq[5].Main[14].TS]
+SData = "TYPE, FlexCStepAdditions"
+%FLG: SData = 2097152
+
+[SF.Seq[5].Main[14].TS.SData.Call]
+LibPath = "ts_support_32.dll"
+Func = "tss_SetTextforInitPanel"
+%LO: Parms = [0]
+%HI: Parms = [6]
+
+[DEF, SF.Seq[5].Main[14].TS.SData.Call.Parms]
+%[0] = "TYPE, FCParameter"
+%[1] = "TYPE, FCParameter"
+%[2] = "TYPE, FCParameter"
+%[3] = "TYPE, FCParameter"
+%[4] = "TYPE, FCParameter"
+%[5] = "TYPE, FCParameter"
+%[6] = "TYPE, FCParameter"
+
+[SF.Seq[5].Main[14].TS.SData.Call.Parms[0]]
+Name = "Return Value"
+Type = 3
+
+[SF.Seq[5].Main[14].TS.SData.Call.Parms[1]]
+Name = "sequenceContext"
+Type = 4
+ObjType = 1
+ArgVal = "ThisContext"
+
+[SF.Seq[5].Main[14].TS.SData.Call.Parms[2]]
+Name = "text"
+Type = 2
+StrPass = 2
+ArgVal = "\"DC-Stromversorgungs-Module\""
+
+[SF.Seq[5].Main[14].TS.SData.Call.Parms[3]]
+Name = "alwaysOntop"
+ArgVal = "True"
+
+[SF.Seq[5].Main[14].TS.SData.Call.Parms[4]]
+Name = "errorOccurred"
+NumType = 2
+NumPass = 1
+ArgVal = "Step.Result.Error.Occurred"
+
+[SF.Seq[5].Main[14].TS.SData.Call.Parms[5]]
+Name = "errorCode"
+NumPass = 1
+ArgVal = "Step.Result.Error.Code"
+
+[SF.Seq[5].Main[14].TS.SData.Call.Parms[6]]
+Name = "errorMessage"
+Type = 2
+StrPass = 2
+ArgVal = "Step.Result.Error.Msg"
+
+[DEF, SF.Seq[5].Main[14]]
+%NAME = "Text aktualisieren"
+
+[SF.Seq[5].Main[15].TS]
+Adapter = "DLL Flexible Prototype Adapter"
+
+[DEF, SF.Seq[5].Main[15].TS]
+SData = "TYPE, FlexCStepAdditions"
+%FLG: SData = 2097152
+
+[SF.Seq[5].Main[15].TS.SData.Call]
+LibPath = "dcpwr.dll"
+Func = "DCPWR_Setup"
+%LO: Parms = [0]
+%HI: Parms = [6]
+
+[DEF, SF.Seq[5].Main[15].TS.SData.Call.Parms]
+%[0] = "TYPE, FCParameter"
+%[1] = "TYPE, FCParameter"
+%[2] = "TYPE, FCParameter"
+%[3] = "TYPE, FCParameter"
+%[4] = "TYPE, FCParameter"
+%[5] = "TYPE, FCParameter"
+%[6] = "TYPE, FCParameter"
+
+[SF.Seq[5].Main[15].TS.SData.Call.Parms[0]]
+Name = "Return Value"
+Type = 3
+
+[SF.Seq[5].Main[15].TS.SData.Call.Parms[1]]
+Name = "sequenceContext"
+Type = 4
+ObjType = 1
+ArgVal = "ThisContext"
+
+[SF.Seq[5].Main[15].TS.SData.Call.Parms[2]]
+Name = "benchName"
+Type = 2
+ArgVal = "StationGlobals.TSVP.BenchName1"
+
+[SF.Seq[5].Main[15].TS.SData.Call.Parms[3]]
+Name = "resourceID"
+NumPass = 1
+ArgVal = "StationGlobals.TSVP.dcpwr_ID"
+
+[SF.Seq[5].Main[15].TS.SData.Call.Parms[4]]
+Name = "errorOccurred"
+NumType = 2
+NumPass = 1
+ArgVal = "Step.Result.Error.Occurred"
+
+[SF.Seq[5].Main[15].TS.SData.Call.Parms[5]]
+Name = "errorCode"
+NumPass = 1
+ArgVal = "Step.Result.Error.Code"
+
+[SF.Seq[5].Main[15].TS.SData.Call.Parms[6]]
+Name = "errorMessage"
+Type = 2
+StrPass = 2
+ArgVal = "Step.Result.Error.Msg"
+
+[DEF, SF.Seq[5].Main[15]]
+%NAME = "DC-Stromversorgungs-Module initialisieren"
+
+[SF.Seq[5].Main[16].TS]
+Adapter = "DLL Flexible Prototype Adapter"
+
+[DEF, SF.Seq[5].Main[16].TS]
+SData = "TYPE, FlexCStepAdditions"
+%FLG: SData = 2097152
+
+[SF.Seq[5].Main[16].TS.SData.Call]
+LibPath = "ts_support_32.dll"
+Func = "tss_SetTextforInitPanel"
+%LO: Parms = [0]
+%HI: Parms = [6]
+
+[DEF, SF.Seq[5].Main[16].TS.SData.Call.Parms]
+%[0] = "TYPE, FCParameter"
+%[1] = "TYPE, FCParameter"
+%[2] = "TYPE, FCParameter"
+%[3] = "TYPE, FCParameter"
+%[4] = "TYPE, FCParameter"
+%[5] = "TYPE, FCParameter"
+%[6] = "TYPE, FCParameter"
+
+[SF.Seq[5].Main[16].TS.SData.Call.Parms[0]]
+Name = "Return Value"
+Type = 3
+
+[SF.Seq[5].Main[16].TS.SData.Call.Parms[1]]
+Name = "sequenceContext"
+Type = 4
+ObjType = 1
+ArgVal = "ThisContext"
+
+[SF.Seq[5].Main[16].TS.SData.Call.Parms[2]]
+Name = "text"
+Type = 2
+StrPass = 2
+ArgVal = "\"Benutzeroberfläche\""
+
+[SF.Seq[5].Main[16].TS.SData.Call.Parms[3]]
+Name = "alwaysOntop"
+ArgVal = "True"
+
+[SF.Seq[5].Main[16].TS.SData.Call.Parms[4]]
+Name = "errorOccurred"
+NumType = 2
+NumPass = 1
+ArgVal = "Step.Result.Error.Occurred"
+
+[SF.Seq[5].Main[16].TS.SData.Call.Parms[5]]
+Name = "errorCode"
+NumPass = 1
+ArgVal = "Step.Result.Error.Code"
+
+[SF.Seq[5].Main[16].TS.SData.Call.Parms[6]]
+Name = "errorMessage"
+Type = 2
+StrPass = 2
+ArgVal = "Step.Result.Error.Msg"
+
+[DEF, SF.Seq[5].Main[16]]
+%NAME = "Text aktualisieren"
+
+[SF.Seq[5].Main[17].TS]
+Adapter = "DLL Flexible Prototype Adapter"
+
+[DEF, SF.Seq[5].Main[17].TS]
+SData = "TYPE, FlexCStepAdditions"
+%FLG: SData = 2097152
+
+[SF.Seq[5].Main[17].TS.SData.Call]
+LibPath = "tspan.dll"
+Func = "tspan_Setup"
+%LO: Parms = [0]
+%HI: Parms = [6]
+
+[DEF, SF.Seq[5].Main[17].TS.SData.Call.Parms]
+%[0] = "TYPE, FCParameter"
+%[1] = "TYPE, FCParameter"
+%[2] = "TYPE, FCParameter"
+%[3] = "TYPE, FCParameter"
+%[4] = "TYPE, FCParameter"
+%[5] = "TYPE, FCParameter"
+%[6] = "TYPE, FCParameter"
+
+[SF.Seq[5].Main[17].TS.SData.Call.Parms[0]]
+Name = "Return Value"
+Type = 3
+
+[SF.Seq[5].Main[17].TS.SData.Call.Parms[1]]
+Name = "sequenceContext"
+Type = 4
+ObjType = 1
+ArgVal = "ThisContext"
+
+[SF.Seq[5].Main[17].TS.SData.Call.Parms[2]]
+Name = "benchName"
+Type = 2
+ArgVal = "StationGlobals.TSVP.BenchName1"
+
+[SF.Seq[5].Main[17].TS.SData.Call.Parms[3]]
+Name = "resourceID"
+NumPass = 1
+ArgVal = "StationGlobals.TSVP.Panel_ID"
+
+[SF.Seq[5].Main[17].TS.SData.Call.Parms[4]]
+Name = "errorOccurred"
+NumType = 2
+NumPass = 1
+ArgVal = "Step.Result.Error.Occurred"
+
+[SF.Seq[5].Main[17].TS.SData.Call.Parms[5]]
+Name = "errorCode"
+NumPass = 1
+ArgVal = "Step.Result.Error.Code"
+
+[SF.Seq[5].Main[17].TS.SData.Call.Parms[6]]
+Name = "errorMessage"
+Type = 2
+StrPass = 2
+ArgVal = "Step.Result.Error.Msg"
+
+[DEF, SF.Seq[5].Main[17]]
+%NAME = "Benutzeroberfläche initialisieren"
+
+[SF.Seq[5].Main[18].TS]
+Adapter = "None Adapter"
+PostExpr = "StationGlobals.TSVP.SequenceFileLoadComplete = True"
+
+[DEF, SF.Seq[5].Main[18].TS]
+SData = "TYPE, NoneStepAdditions"
+%FLG: SData = 2097152
+
+[DEF, SF.Seq[5].Main[18]]
+%NAME = "StationGlobal setzen"
+
+[DEF, SF.Seq[5].Cleanup]
+%[0] = FlexCStep
+%TYPE: %[0] = "Action"
+%[1] = FlexCStep
+%TYPE: %[1] = "Action"
+
+[SF.Seq[5].Cleanup[0].TS]
+Adapter = "DLL Flexible Prototype Adapter"
+
+[DEF, SF.Seq[5].Cleanup[0].TS]
+SData = "TYPE, FlexCStepAdditions"
+%FLG: SData = 2097152
+
+[SF.Seq[5].Cleanup[0].TS.SData.Call]
+LibPath = "ts_support_32.dll"
+Func = "tss_HideInitPanel"
+%LO: Parms = [0]
+%HI: Parms = [4]
+
+[DEF, SF.Seq[5].Cleanup[0].TS.SData.Call.Parms]
+%[0] = "TYPE, FCParameter"
+%[1] = "TYPE, FCParameter"
+%[2] = "TYPE, FCParameter"
+%[3] = "TYPE, FCParameter"
+%[4] = "TYPE, FCParameter"
+
+[SF.Seq[5].Cleanup[0].TS.SData.Call.Parms[0]]
+Name = "Return Value"
+Type = 3
+
+[SF.Seq[5].Cleanup[0].TS.SData.Call.Parms[1]]
+Name = "sequenceContext"
+Type = 4
+ObjType = 1
+ArgVal = "ThisContext"
+
+[SF.Seq[5].Cleanup[0].TS.SData.Call.Parms[2]]
+Name = "errorOccurred"
+NumType = 2
+NumPass = 1
+ArgVal = "Step.Result.Error.Occurred"
+
+[SF.Seq[5].Cleanup[0].TS.SData.Call.Parms[3]]
+Name = "errorCode"
+NumPass = 1
+ArgVal = "Step.Result.Error.Code"
+
+[SF.Seq[5].Cleanup[0].TS.SData.Call.Parms[4]]
+Name = "errorMessage"
+Type = 2
+StrPass = 2
+ArgVal = "Step.Result.Error.Msg"
+
+[DEF, SF.Seq[5].Cleanup[0]]
+%NAME = "Init Panel schließen"
+
+[SF.Seq[5].Cleanup[1].TS]
+Adapter = "DLL Flexible Prototype Adapter"
+
+[DEF, SF.Seq[5].Cleanup[1].TS]
+SData = "TYPE, FlexCStepAdditions"
+%FLG: SData = 2097152
+
+[SF.Seq[5].Cleanup[1].TS.SData.Call]
+LibPath = "tspan.dll"
+Func = "tspan_DisplayDebugPanel"
+%LO: Parms = [0]
+%HI: Parms = [5]
+
+[DEF, SF.Seq[5].Cleanup[1].TS.SData.Call.Parms]
+%[0] = "TYPE, FCParameter"
+%[1] = "TYPE, FCParameter"
+%[2] = "TYPE, FCParameter"
+%[3] = "TYPE, FCParameter"
+%[4] = "TYPE, FCParameter"
+%[5] = "TYPE, FCParameter"
+
+[SF.Seq[5].Cleanup[1].TS.SData.Call.Parms[0]]
+Name = "Return Value"
+Type = 3
+
+[SF.Seq[5].Cleanup[1].TS.SData.Call.Parms[1]]
+Name = "sequenceContext"
+Type = 4
+ObjType = 1
+ArgVal = "ThisContext"
+
+[SF.Seq[5].Cleanup[1].TS.SData.Call.Parms[2]]
+Name = "resourceID"
+ArgVal = "StationGlobals.TSVP.Panel_ID"
+
+[SF.Seq[5].Cleanup[1].TS.SData.Call.Parms[3]]
+Name = "errorOccurred"
+NumType = 2
+NumPass = 1
+ArgVal = "Step.Result.Error.Occurred"
+
+[SF.Seq[5].Cleanup[1].TS.SData.Call.Parms[4]]
+Name = "errorCode"
+NumPass = 1
+ArgVal = "Step.Result.Error.Code"
+
+[SF.Seq[5].Cleanup[1].TS.SData.Call.Parms[5]]
+Name = "errorMessage"
+Type = 2
+StrPass = 2
+ArgVal = "Step.Result.Error.Msg"
+
+[DEF, SF.Seq[5].Cleanup[1]]
+%NAME = "Debug Panel anzeigen"
+
+[DEF, SF.Seq[5].RTS]
+Type = Num
+EPNameExpr = Str
+EPEnabledExpr = Str
+EPMenuHint = Str
+EPIgnoreClient = Bool
+EPInitiallyHidden = Bool
+EPCheckToSaveTitledFile = Bool
+ShowEPForFileWin = Bool
+ShowEPForExeWin = Bool
+CopyStepsOnOverriding = Bool
+OptimizeNonReentrantCalls = Bool
+Priority = Num
+ShowEPAlways = Bool
+ShowEPForEditorOnly = Bool
+AllowIntExeOfEP = Bool
+
+[SF.Seq[5].RTS]
+EPEnabledExpr = "True"
+EPCheckToSaveTitledFile = True
+ShowEPForFileWin = True
+CopyStepsOnOverriding = True
+OptimizeNonReentrantCalls = True
+Priority = 2953567917
+
+[DEF, SF.Seq[6]]
+Parameters = Obj
+Locals = Obj
+Main = Objs
+Setup = Objs
+Cleanup = Objs
+GotoCleanupOnFail = Bool
+StoreResults = Bool
+RecordResults = Bool
+RTS = Obj
+Requirements = Obj
+%NAME = "SequenceFileUnload"
+
+[SF.Seq[6]]
+%FLG: Parameters = 262144
+%LO: Cleanup = [0]
+%HI: Cleanup = [7]
+%FLG: GotoCleanupOnFail = 8
+StoreResults = True
+RecordResults = True
+%FLG: RecordResults = 8
+%FLG: RTS = 262152
+%FLG: Requirements = 4456456
+
+[DEF, SF.Seq[6].Locals]
+ResultList = Objs
+
+[DEF, SF.Seq[6].Locals.ResultList]
+%EPTYPE = TEResult
+
+[DEF, SF.Seq[6].Cleanup]
+%[0] = FlexCStep
+%TYPE: %[0] = "Action"
+%[1] = FlexCStep
+%TYPE: %[1] = "Action"
+%[2] = FlexCStep
+%TYPE: %[2] = "Action"
+%[3] = FlexCStep
+%TYPE: %[3] = "Action"
+%[4] = FlexCStep
+%TYPE: %[4] = "Action"
+%[5] = FlexCStep
+%TYPE: %[5] = "Action"
+%[6] = FlexCStep
+%TYPE: %[6] = "Action"
+%[7] = NoneStep
+%TYPE: %[7] = "Statement"
+
+[SF.Seq[6].Cleanup[0].TS]
+Adapter = "DLL Flexible Prototype Adapter"
+
+[DEF, SF.Seq[6].Cleanup[0].TS]
+SData = "TYPE, FlexCStepAdditions"
+%FLG: SData = 2097152
+
+[SF.Seq[6].Cleanup[0].TS.SData.Call]
+LibPath = "dmm.dll"
+Func = "DMM_Cleanup"
+%LO: Parms = [0]
+%HI: Parms = [5]
+
+[DEF, SF.Seq[6].Cleanup[0].TS.SData.Call.Parms]
+%[0] = "TYPE, FCParameter"
+%[1] = "TYPE, FCParameter"
+%[2] = "TYPE, FCParameter"
+%[3] = "TYPE, FCParameter"
+%[4] = "TYPE, FCParameter"
+%[5] = "TYPE, FCParameter"
+
+[SF.Seq[6].Cleanup[0].TS.SData.Call.Parms[0]]
+Name = "Return Value"
+Type = 3
+
+[SF.Seq[6].Cleanup[0].TS.SData.Call.Parms[1]]
+Name = "sequenceContext"
+Type = 4
+ObjType = 1
+ArgVal = "ThisContext"
+
+[SF.Seq[6].Cleanup[0].TS.SData.Call.Parms[2]]
+Name = "resourceID"
+ArgVal = "StationGlobals.TSVP.dmm_ID"
+
+[SF.Seq[6].Cleanup[0].TS.SData.Call.Parms[3]]
+Name = "errorOccurred"
+NumType = 2
+NumPass = 1
+ArgVal = "Step.Result.Error.Occurred"
+
+[SF.Seq[6].Cleanup[0].TS.SData.Call.Parms[4]]
+Name = "errorCode"
+NumPass = 1
+ArgVal = "Step.Result.Error.Code"
+ArgDisplayVal = "Step.Result.Error.Code"
+
+[SF.Seq[6].Cleanup[0].TS.SData.Call.Parms[5]]
+Name = "errorMessage"
+Type = 2
+StrPass = 2
+ArgVal = "Step.Result.Error.Msg"
+ArgDisplayVal = "Step.Result.Error.Msg"
+
+[DEF, SF.Seq[6].Cleanup[0]]
+%NAME = "Digitalmulitmeter beenden"
+
+[SF.Seq[6].Cleanup[1].TS]
+Adapter = "DLL Flexible Prototype Adapter"
+
+[DEF, SF.Seq[6].Cleanup[1].TS]
+SData = "TYPE, FlexCStepAdditions"
+%FLG: SData = 2097152
+
+[SF.Seq[6].Cleanup[1].TS.SData.Call]
+LibPath = "ict.dll"
+Func = "ICT_Cleanup"
+%LO: Parms = [0]
+%HI: Parms = [5]
+
+[DEF, SF.Seq[6].Cleanup[1].TS.SData.Call.Parms]
+%[0] = "TYPE, FCParameter"
+%[1] = "TYPE, FCParameter"
+%[2] = "TYPE, FCParameter"
+%[3] = "TYPE, FCParameter"
+%[4] = "TYPE, FCParameter"
+%[5] = "TYPE, FCParameter"
+
+[SF.Seq[6].Cleanup[1].TS.SData.Call.Parms[0]]
+Name = "Return Value"
+Type = 3
+
+[SF.Seq[6].Cleanup[1].TS.SData.Call.Parms[1]]
+Name = "sequenceContext"
+Type = 4
+ObjType = 1
+ArgVal = "ThisContext"
+
+[SF.Seq[6].Cleanup[1].TS.SData.Call.Parms[2]]
+Name = "resourceID"
+ArgVal = "StationGlobals.TSVP.ict_ID"
+
+[SF.Seq[6].Cleanup[1].TS.SData.Call.Parms[3]]
+Name = "errorOccurred"
+NumType = 2
+NumPass = 1
+ArgVal = "Step.Result.Error.Occurred"
+
+[SF.Seq[6].Cleanup[1].TS.SData.Call.Parms[4]]
+Name = "errorCode"
+NumPass = 1
+ArgVal = "Step.Result.Error.Code"
+ArgDisplayVal = "Step.Result.Error.Code"
+
+[SF.Seq[6].Cleanup[1].TS.SData.Call.Parms[5]]
+Name = "errorMessage"
+Type = 2
+StrPass = 2
+ArgVal = "Step.Result.Error.Msg"
+ArgDisplayVal = "Step.Result.Error.Msg"
+
+[DEF, SF.Seq[6].Cleanup[1]]
+%NAME = "ICT Erweiterungsmodul beenden"
+
+[SF.Seq[6].Cleanup[2].TS]
+Adapter = "DLL Flexible Prototype Adapter"
+
+[DEF, SF.Seq[6].Cleanup[2].TS]
+SData = "TYPE, FlexCStepAdditions"
+%FLG: SData = 2097152
+
+[SF.Seq[6].Cleanup[2].TS.SData.Call]
+LibPath = "dcpwr.dll"
+Func = "DCPWR_Cleanup"
+%LO: Parms = [0]
+%HI: Parms = [5]
+
+[DEF, SF.Seq[6].Cleanup[2].TS.SData.Call.Parms]
+%[0] = "TYPE, FCParameter"
+%[1] = "TYPE, FCParameter"
+%[2] = "TYPE, FCParameter"
+%[3] = "TYPE, FCParameter"
+%[4] = "TYPE, FCParameter"
+%[5] = "TYPE, FCParameter"
+
+[SF.Seq[6].Cleanup[2].TS.SData.Call.Parms[0]]
+Name = "Return Value"
+Type = 3
+
+[SF.Seq[6].Cleanup[2].TS.SData.Call.Parms[1]]
+Name = "sequenceContext"
+Type = 4
+ObjType = 1
+ArgVal = "ThisContext"
+
+[SF.Seq[6].Cleanup[2].TS.SData.Call.Parms[2]]
+Name = "resourceID"
+ArgVal = "StationGlobals.TSVP.dcpwr_ID"
+
+[SF.Seq[6].Cleanup[2].TS.SData.Call.Parms[3]]
+Name = "errorOccurred"
+NumType = 2
+NumPass = 1
+ArgVal = "Step.Result.Error.Occurred"
+
+[SF.Seq[6].Cleanup[2].TS.SData.Call.Parms[4]]
+Name = "errorCode"
+NumPass = 1
+ArgVal = "Step.Result.Error.Code"
+ArgDisplayVal = "Step.Result.Error.Code"
+
+[SF.Seq[6].Cleanup[2].TS.SData.Call.Parms[5]]
+Name = "errorMessage"
+Type = 2
+StrPass = 2
+ArgVal = "Step.Result.Error.Msg"
+ArgDisplayVal = "Step.Result.Error.Msg"
+
+[DEF, SF.Seq[6].Cleanup[2]]
+%NAME = "DC-Stromversorgungs-Module beenden"
+
+[SF.Seq[6].Cleanup[3].TS]
+Adapter = "DLL Flexible Prototype Adapter"
+
+[DEF, SF.Seq[6].Cleanup[3].TS]
+SData = "TYPE, FlexCStepAdditions"
+%FLG: SData = 2097152
+
+[SF.Seq[6].Cleanup[3].TS.SData.Call]
+LibPath = "swmgr.dll"
+Func = "SWMGR_Cleanup"
+%LO: Parms = [0]
+%HI: Parms = [5]
+
+[DEF, SF.Seq[6].Cleanup[3].TS.SData.Call.Parms]
+%[0] = "TYPE, FCParameter"
+%[1] = "TYPE, FCParameter"
+%[2] = "TYPE, FCParameter"
+%[3] = "TYPE, FCParameter"
+%[4] = "TYPE, FCParameter"
+%[5] = "TYPE, FCParameter"
+
+[SF.Seq[6].Cleanup[3].TS.SData.Call.Parms[0]]
+Name = "Return Value"
+Type = 3
+
+[SF.Seq[6].Cleanup[3].TS.SData.Call.Parms[1]]
+Name = "sequenceContext"
+Type = 4
+ObjType = 1
+ArgVal = "ThisContext"
+
+[SF.Seq[6].Cleanup[3].TS.SData.Call.Parms[2]]
+Name = "resourceID"
+ArgVal = "StationGlobals.TSVP.swmgr_ID"
+
+[SF.Seq[6].Cleanup[3].TS.SData.Call.Parms[3]]
+Name = "errorOccurred"
+NumType = 2
+NumPass = 1
+ArgVal = "Step.Result.Error.Occurred"
+
+[SF.Seq[6].Cleanup[3].TS.SData.Call.Parms[4]]
+Name = "errorCode"
+NumPass = 1
+ArgVal = "Step.Result.Error.Code"
+ArgDisplayVal = "Step.Result.Error.Code"
+
+[SF.Seq[6].Cleanup[3].TS.SData.Call.Parms[5]]
+Name = "errorMessage"
+Type = 2
+StrPass = 2
+ArgVal = "Step.Result.Error.Msg"
+ArgDisplayVal = "Step.Result.Error.Msg"
+
+[DEF, SF.Seq[6].Cleanup[3]]
+%NAME = "Switch-Manager beenden"
+
+[SF.Seq[6].Cleanup[4].TS]
+Adapter = "DLL Flexible Prototype Adapter"
+
+[DEF, SF.Seq[6].Cleanup[4].TS]
+SData = "TYPE, FlexCStepAdditions"
+%FLG: SData = 2097152
+
+[SF.Seq[6].Cleanup[4].TS.SData.Call]
+LibPath = "tspan.dll"
+Func = "tspan_HideActualPanel"
+%LO: Parms = [0]
+%HI: Parms = [5]
+
+[DEF, SF.Seq[6].Cleanup[4].TS.SData.Call.Parms]
+%[0] = "TYPE, FCParameter"
+%[1] = "TYPE, FCParameter"
+%[2] = "TYPE, FCParameter"
+%[3] = "TYPE, FCParameter"
+%[4] = "TYPE, FCParameter"
+%[5] = "TYPE, FCParameter"
+
+[SF.Seq[6].Cleanup[4].TS.SData.Call.Parms[0]]
+Name = "Return Value"
+Type = 3
+
+[SF.Seq[6].Cleanup[4].TS.SData.Call.Parms[1]]
+Name = "sequenceContext"
+Type = 4
+ObjType = 1
+ArgVal = "ThisContext"
+
+[SF.Seq[6].Cleanup[4].TS.SData.Call.Parms[2]]
+Name = "resourceID"
+ArgVal = "StationGlobals.TSVP.Panel_ID"
+ArgDisplayVal = "StationGlobals.TSVP.Panel_ID"
+
+[SF.Seq[6].Cleanup[4].TS.SData.Call.Parms[3]]
+Name = "errorOccurred"
+NumType = 2
+NumPass = 1
+ArgVal = "Step.Result.Error.Occurred"
+ArgDisplayVal = "Step.Result.Error.Occurred"
+
+[SF.Seq[6].Cleanup[4].TS.SData.Call.Parms[4]]
+Name = "errorCode"
+NumPass = 1
+ArgVal = "Step.Result.Error.Code"
+ArgDisplayVal = "Step.Result.Error.Code"
+
+[SF.Seq[6].Cleanup[4].TS.SData.Call.Parms[5]]
+Name = "errorMessage"
+Type = 2
+StrPass = 2
+ArgVal = "Step.Result.Error.Msg"
+ArgDisplayVal = "Step.Result.Error.Msg"
+
+[DEF, SF.Seq[6].Cleanup[4]]
+%NAME = "Aktuell angezeigte Benutzeroberfläche entfernen"
+
+[SF.Seq[6].Cleanup[5].TS]
+Adapter = "DLL Flexible Prototype Adapter"
+
+[DEF, SF.Seq[6].Cleanup[5].TS]
+SData = "TYPE, FlexCStepAdditions"
+%FLG: SData = 2097152
+
+[SF.Seq[6].Cleanup[5].TS.SData.Call]
+LibPath = "tspan.dll"
+Func = "tspan_Cleanup"
+%LO: Parms = [0]
+%HI: Parms = [5]
+
+[DEF, SF.Seq[6].Cleanup[5].TS.SData.Call.Parms]
+%[0] = "TYPE, FCParameter"
+%[1] = "TYPE, FCParameter"
+%[2] = "TYPE, FCParameter"
+%[3] = "TYPE, FCParameter"
+%[4] = "TYPE, FCParameter"
+%[5] = "TYPE, FCParameter"
+
+[SF.Seq[6].Cleanup[5].TS.SData.Call.Parms[0]]
+Name = "Return Value"
+Type = 3
+
+[SF.Seq[6].Cleanup[5].TS.SData.Call.Parms[1]]
+Name = "sequenceContext"
+Type = 4
+ObjType = 1
+ArgVal = "ThisContext"
+
+[SF.Seq[6].Cleanup[5].TS.SData.Call.Parms[2]]
+Name = "resourceID"
+ArgVal = "StationGlobals.TSVP.Panel_ID"
+
+[SF.Seq[6].Cleanup[5].TS.SData.Call.Parms[3]]
+Name = "errorOccurred"
+NumType = 2
+NumPass = 1
+ArgVal = "Step.Result.Error.Occurred"
+
+[SF.Seq[6].Cleanup[5].TS.SData.Call.Parms[4]]
+Name = "errorCode"
+NumPass = 1
+ArgVal = "Step.Result.Error.Code"
+
+[SF.Seq[6].Cleanup[5].TS.SData.Call.Parms[5]]
+Name = "errorMessage"
+Type = 2
+StrPass = 2
+ArgVal = "Step.Result.Error.Msg"
+
+[DEF, SF.Seq[6].Cleanup[5]]
+%NAME = "Cleanup"
+
+[SF.Seq[6].Cleanup[6].TS]
+Adapter = "DLL Flexible Prototype Adapter"
+
+[DEF, SF.Seq[6].Cleanup[6].TS]
+SData = "TYPE, FlexCStepAdditions"
+%FLG: SData = 2097152
+
+[SF.Seq[6].Cleanup[6].TS.SData.Call]
+LibPath = "resmgr.dll"
+Func = "RESMGR_Cleanup"
+%LO: Parms = [0]
+%HI: Parms = [4]
+
+[DEF, SF.Seq[6].Cleanup[6].TS.SData.Call.Parms]
+%[0] = "TYPE, FCParameter"
+%[1] = "TYPE, FCParameter"
+%[2] = "TYPE, FCParameter"
+%[3] = "TYPE, FCParameter"
+%[4] = "TYPE, FCParameter"
+
+[SF.Seq[6].Cleanup[6].TS.SData.Call.Parms[0]]
+Name = "Return Value"
+Type = 3
+
+[SF.Seq[6].Cleanup[6].TS.SData.Call.Parms[1]]
+Name = "sequenceContext"
+Type = 4
+ObjType = 1
+ArgVal = "ThisContext"
+
+[SF.Seq[6].Cleanup[6].TS.SData.Call.Parms[2]]
+Name = "errorOccurred"
+NumType = 2
+NumPass = 1
+ArgVal = "Step.Result.Error.Occurred"
+
+[SF.Seq[6].Cleanup[6].TS.SData.Call.Parms[3]]
+Name = "errorCode"
+NumPass = 1
+ArgVal = "Step.Result.Error.Code"
+
+[SF.Seq[6].Cleanup[6].TS.SData.Call.Parms[4]]
+Name = "errorMessage"
+Type = 2
+StrPass = 2
+ArgVal = "Step.Result.Error.Msg"
+
+[DEF, SF.Seq[6].Cleanup[6]]
+%NAME = "Resource-Manager entladen"
+
+[SF.Seq[6].Cleanup[7].TS]
+Adapter = "None Adapter"
+PostExpr = "StationGlobals.TSVP.SequenceFileLoadComplete = False"
+
+[DEF, SF.Seq[6].Cleanup[7].TS]
+SData = "TYPE, NoneStepAdditions"
+%FLG: SData = 2097152
+
+[DEF, SF.Seq[6].Cleanup[7]]
+%NAME = "StationGlobal setzen"
+
+[DEF, SF.Seq[6].RTS]
+Type = Num
+EPNameExpr = Str
+EPEnabledExpr = Str
+EPMenuHint = Str
+EPIgnoreClient = Bool
+EPInitiallyHidden = Bool
+EPCheckToSaveTitledFile = Bool
+ShowEPForFileWin = Bool
+ShowEPForExeWin = Bool
+CopyStepsOnOverriding = Bool
+OptimizeNonReentrantCalls = Bool
+Priority = Num
+ShowEPAlways = Bool
+ShowEPForEditorOnly = Bool
+AllowIntExeOfEP = Bool
+
+[SF.Seq[6].RTS]
+EPEnabledExpr = "True"
+EPCheckToSaveTitledFile = True
+ShowEPForFileWin = True
+CopyStepsOnOverriding = True
+OptimizeNonReentrantCalls = True
+Priority = 2953567917
+
+[%TYPES]
+Path = "Path"
+Action = "Action"
+StepTypeSubstepsArray = "StepTypeSubstepsArray"
+StepTypeDescFmt = "StepTypeDescFmt"
+StepTypeDefNameFmt = "StepTypeDefNameFmt"
+StepTypeMenu = "StepTypeMenu"
+TEInf = "TEInf"
+Error = "Error"
+CommonResults = "CommonResults"
+FlexCStepAdditions = "FlexCStepAdditions"
+FCParameter = "FCParameter"
+UUT = "UUT"
+NI_CriticalFailureStackEntry = "NI_CriticalFailureStackEntry"
+EditSubstep = "EditSubstep"
+NoneStepAdditions = "NoneStepAdditions"
+Statement = "Statement"
+Label = "Label"
+Goto = "Goto"
+NI_Wait = "NI_Wait"
+PostSubstep = "PostSubstep"
+StepTypeDescFmt = "StepTypeDescFmt"
+StepTypeDefNameFmt = "StepTypeDefNameFmt"
+UUT = "UUT"
+NI_CriticalFailureStackEntry = "NI_CriticalFailureStackEntry"
+
+[DEF, Path]
+%LOCATION = "StdTypes"
+%ROOT_TYPE = True
+
+[Path]
+%TIMESTAMP = 1020712930
+%VERSION = "2.0.1.121"
+%FLG = 37748736
+
+[DEF, Action]
+%LOCATION = "StepTypes"
+Substeps = "TYPE, StepTypeSubstepsArray"
+DescriptionFormat = "TYPE, StepTypeDescFmt"
+DefaultNameFormat = "TYPE, StepTypeDefNameFmt"
+Menu = "TYPE, StepTypeMenu"
+TS = "TYPE, TEInf"
+Result = Obj
+CodeTemplates = Str
+%FLG: CodeTemplates = 524288
+%ROOT_TYPE = True
+
+[Action]
+DescriptionFormat Line0001 = "ResStr(\"NI_STEPTYPES\", \"ACTION_DESCRIPTION_NAME\") + ((\"%ModuleDescription\" == \"\") ? \"\" : \",  %ModuleDescripti"
+DescriptionFormat Line0002 = "on\")"
+DefaultNameFormat = "ResStr(\"NI_STEPTYPES\", \"ACTION_DEF_STEP_NAME\")"
+%FLG: Result = 4194304
+%INSTFLG: Result = 4194304
+CodeTemplates = "Default_Template|DefaultHTB72_Template|DefaultHTB80_Template|DefaultVC++_Template|DefaultMFC_Template"
+%FLG: CodeTemplates = 24
+%TIMESTAMP = 1008353147
+%VERSION = "2.0.1.121"
+%FLG = 33554433
+%TYPE_FLG = 2
+
+[Action.Menu]
+ItemName = "ResStr(\"NI_STEPTYPES\", \"ACTION_MENU_ITEM_NAME\")"
+Group = "Action"
+
+[DEF, Action.TS]
+SData = Obj
+%FLG: SData = 2097152
+
+[Action.TS]
+%INSTFLG: SData = 2097152
+%INSTOVRD: SData = 7143449
+%INSTFLG: PassAct = 1
+%INSTFLG: FailAct = 1
+%INSTFLG: PassActTarget = 1
+%INSTFLG: FailActTarget = 1
+
+[DEF, Action.Result]
+Error = "TYPE, Error"
+Status = Str
+ReportText = Str
+Common = "TYPE, CommonResults"
+
+[Action.Result]
+%FLG: Error = 4194304
+%INSTFLG: Error = 4194304
+%INSTOVRD: Error = 4194304
+%FLG: Status = 4194304
+%INSTFLG: Status = 4194304
+%INSTOVRD: Common = 4194304
+
+[DEF, StepTypeSubstepsArray]
+%LOCATION = "StdTypes"
+%ROOT_TYPE = True
+
+[StepTypeSubstepsArray]
+%TIMESTAMP = 1018442948
+%VERSION = "2.0.1.121"
+%FLG = 37748760
+%INSTFLG = 524312
+%INSTOVRD = 655384
+
+[DEF, StepTypeMenu]
+%LOCATION = "StdTypes"
+Adapter = Str
+CanBeSubstepType = Bool
+CanOnlyBeSubstepType = Bool
+Category = Str
+ItemName = Str
+SingularItemName = Str
+SeparatorBeforeCategory = Bool
+SeparatorBeforeItemName = Bool
+Group = Str
+%ROOT_TYPE = True
+
+[StepTypeMenu]
+Category = "\"\""
+ItemName = "\"\""
+SingularItemName = "\"\""
+%TIMESTAMP = 1018442948
+%VERSION = "2.0.1.121"
+%FLG = 37748760
+%INSTFLG = 524312
+%INSTOVRD = 524312
+
+[DEF, TEInf]
+%LOCATION = "StdTypes"
+Adapter = Str
+Icon = Str
+SData = Obj
+%FLG: SData = 2097152
+PreCond = Str
+LoadOpt = Str
+UnloadOpt = Str
+Mode = Str
+WindowActivation = Str
+NoResult = Bool
+StepFCSeqF = Bool
+IgnoreRTE = Bool
+UseMutex = Bool
+MutexNameOrRef = Str
+BatchSyncOpt = Num
+SwitchEnabled = Bool
+VirtualDeviceName = Str
+SwitchOperation = Num
+RouteGroupConnect = Str
+RouteGroupDisconnect = Str
+MulticonnectMode = Num
+OperationOrder = Num
+ConnectionLifetime = Num
+WaitForDebounce = Bool
+PassAct = Str
+FailAct = Str
+PassActTarget = Str
+FailActTarget = Str
+CustExpr = Str
+CustTrueAct = Str
+CustFalseAct = Str
+CustTrueActTarget = Str
+CustFalseActTarget = Str
+LoopType = Str
+LoopWhile = Str
+LoopStatus = Str
+LoopIncrement = Str
+LoopInitialize = Str
+LoopOpt = Num
+PreExpr = Str
+PostExpr = Str
+StatusExpr = Str
+HasModule = Bool
+CanSpecifyModule = Bool
+CanEditCode = Bool
+CanEditModulePrototype = Bool
+PrecondIntExe = Num
+%ROOT_TYPE = True
+
+[TEInf]
+%INSTOVRD: Adapter = 5046297
+%INSTOVRD: Icon = 5046297
+%INSTFLG: SData = 2097152
+%INSTOVRD: SData = 7143449
+%INSTOVRD: PreCond = 5046297
+LoadOpt = "PreloadWhenExecuted"
+%INSTOVRD: LoadOpt = 5046297
+UnloadOpt = "UnloadWithFile"
+%INSTOVRD: UnloadOpt = 5046297
+Mode = "Normal"
+%INSTOVRD: Mode = 5046297
+WindowActivation = "None"
+%INSTOVRD: WindowActivation = 5046297
+%INSTOVRD: NoResult = 5046297
+StepFCSeqF = True
+%INSTOVRD: StepFCSeqF = 5046297
+%INSTOVRD: IgnoreRTE = 5046297
+%INSTOVRD: UseMutex = 5046297
+%INSTOVRD: MutexNameOrRef = 5046297
+%INSTOVRD: BatchSyncOpt = 5046297
+%INSTOVRD: SwitchEnabled = 5046297
+%INSTOVRD: VirtualDeviceName = 5046297
+SwitchOperation = 1
+%INSTOVRD: SwitchOperation = 5046297
+%INSTOVRD: RouteGroupConnect = 5046297
+%INSTOVRD: RouteGroupDisconnect = 5046297
+MulticonnectMode = 1
+%INSTOVRD: MulticonnectMode = 5046297
+OperationOrder = 2
+%INSTOVRD: OperationOrder = 5046297
+%INSTOVRD: ConnectionLifetime = 5046297
+WaitForDebounce = True
+%INSTOVRD: WaitForDebounce = 5046297
+PassAct = "Next"
+%INSTOVRD: PassAct = 5046297
+FailAct = "Next"
+%INSTOVRD: FailAct = 5046297
+%INSTOVRD: PassActTarget = 5046297
+%INSTOVRD: FailActTarget = 5046297
+%INSTOVRD: CustExpr = 5046297
+CustTrueAct = "Next"
+%INSTOVRD: CustTrueAct = 5046297
+CustFalseAct = "Next"
+%INSTOVRD: CustFalseAct = 5046297
+%INSTOVRD: CustTrueActTarget = 5046297
+%INSTOVRD: CustFalseActTarget = 5046297
+LoopType = "NoLooping"
+%INSTOVRD: LoopType = 5046297
+%INSTOVRD: LoopWhile = 5046297
+%INSTOVRD: LoopStatus = 5046297
+LoopIncrement = "RunState.LoopIndex += 1"
+%INSTOVRD: LoopIncrement = 5046297
+LoopInitialize = "RunState.LoopIndex = 0"
+%INSTOVRD: LoopInitialize = 5046297
+%INSTOVRD: LoopOpt = 5046297
+%INSTOVRD: PreExpr = 5046297
+%INSTOVRD: PostExpr = 5046297
+%INSTOVRD: StatusExpr = 5046297
+HasModule = True
+%INSTOVRD: HasModule = 5046297
+CanSpecifyModule = True
+%INSTOVRD: CanSpecifyModule = 5046297
+CanEditCode = True
+%INSTOVRD: CanEditCode = 5046297
+CanEditModulePrototype = True
+%INSTOVRD: CanEditModulePrototype = 5046297
+%INSTOVRD: PrecondIntExe = 5046297
+%TIMESTAMP = 1018442948
+%VERSION = "2.0.1.121"
+%FLG = 33554456
+%INSTFLG = 262168
+%INSTOVRD = 262168
+
+[DEF, Error]
+%LOCATION = "StdTypes"
+Code = Num
+Msg = Str
+Occurred = Bool
+%ROOT_TYPE = True
+
+[Error]
+%FLG: Code = 4194304
+%INSTFLG: Code = 4194304
+%FLG: Msg = 4194304
+%INSTFLG: Msg = 4194304
+%FLG: Occurred = 4194304
+%INSTFLG: Occurred = 4194304
+%TIMESTAMP = 1018442948
+%VERSION = "2.0.1.121"
+%FLG = 37748736
+
+[DEF, CommonResults]
+%LOCATION = "StdTypes"
+%ROOT_TYPE = True
+
+[CommonResults]
+%TIMESTAMP = 1018442948
+%VERSION = "2.0.1.121"
+%FLG = 37748736
+%INSTFLG = 4194304
+
+[DEF, FlexCStepAdditions]
+%LOCATION = "StdTypes"
+Call = ExternalCall
+ModuleSrcPath = "TYPE, Path"
+%ROOT_TYPE = True
+
+[DEF, FlexCStepAdditions.Call]
+LibPath = "TYPE, Path"
+Func = Str
+Conv = Num
+Parms = Objs
+
+[FlexCStepAdditions.Call]
+Conv = 1
+%LO: Parms = [0]
+%HI: Parms = [0]
+
+[DEF, FlexCStepAdditions.Call.Parms]
+%EPTYPE = "TYPE, FCParameter"
+%FLG: %EPTYPE = 131072
+%[0] = "TYPE, FCParameter"
+
+[FlexCStepAdditions.Call.Parms[0]]
+Name = "Return Value"
+Type = 3
+
+[FlexCStepAdditions]
+%TIMESTAMP = 1008353143
+%VERSION = "2.0.1.121"
+%FLG = 33554456
+
+[DEF, FCParameter]
+%LOCATION = "StdTypes"
+Name = Str
+Type = Num
+NumType = Num
+ObjType = Num
+StructType = Str
+NumPass = Num
+NumEls = Str
+StrPass = Num
+ResultAct = Num
+ArgVal = Str
+ArgDisplayVal = Str
+Flags = Num
+%ROOT_TYPE = True
+
+[FCParameter]
+Name = "_notNamed"
+NumType = 4
+NumEls = "1024"
+%TIMESTAMP = 1008353143
+%VERSION = "2.0.1.121"
+%FLG = 33554456
+
+[DEF, EditSubstep]
+%LOCATION = "StepTypes"
+DescriptionFormat = "TYPE, StepTypeDescFmt"
+DefaultNameFormat = "TYPE, StepTypeDefNameFmt"
+Menu = "TYPE, StepTypeMenu"
+Substeps = "TYPE, StepTypeSubstepsArray"
+CodeTemplates = Str
+%FLG: CodeTemplates = 524288
+TS = "TYPE, TEInf"
+Result = Obj
+MenuName = Str
+%ROOT_TYPE = True
+
+[EditSubstep]
+DefaultNameFormat = "ResStr(\"NI_STEPTYPES\", \"EDIT_DEF_SUBSTEP_NAME\")"
+CodeTemplates = "Default_Template"
+%FLG: CodeTemplates = 24
+%FLG: Result = 4194304
+%INSTFLG: Result = 4194304
+%TIMESTAMP = 1018442948
+%VERSION = "2.0.1.121"
+%FLG = 37748737
+%TYPE_FLG = 2
+
+[EditSubstep.Menu]
+CanBeSubstepType = True
+CanOnlyBeSubstepType = True
+ItemName = "ResStr(\"NI_STEPTYPES\", \"EDIT_SUBSTEP_MENU_ITEM_NAME\")"
+Group = "EditSubsteps"
+
+[DEF, EditSubstep.TS]
+SData = Obj
+%FLG: SData = 2097152
+
+[EditSubstep.TS]
+%INSTFLG: SData = 2097152
+%INSTOVRD: SData = 7274521
+
+[DEF, EditSubstep.Result]
+Error = "TYPE, Error"
+Status = Str
+ReportText = Str
+Common = "TYPE, CommonResults"
+
+[EditSubstep.Result]
+%FLG: Error = 4194304
+%INSTFLG: Error = 4194304
+%INSTOVRD: Error = 4194304
+%FLG: Status = 4194304
+%INSTFLG: Status = 4194304
+
+[DEF, NoneStepAdditions]
+%LOCATION = "StdTypes"
+%ROOT_TYPE = True
+
+[NoneStepAdditions]
+%TIMESTAMP = 1008353144
+%VERSION = "2.0.1.121"
+%FLG = 33554456
+
+[DEF, Statement]
+%LOCATION = "StepTypes"
+Substeps = "TYPE, StepTypeSubstepsArray"
+DescriptionFormat = "TYPE, StepTypeDescFmt"
+DefaultNameFormat = "TYPE, StepTypeDefNameFmt"
+Menu = "TYPE, StepTypeMenu"
+TS = "TYPE, TEInf"
+Result = Obj
+CodeTemplates = Str
+%FLG: CodeTemplates = 524288
+%ROOT_TYPE = True
+
+[Statement]
+%LO: Substeps = [0]
+%HI: Substeps = [0]
+DescriptionFormat = "LocalizeExpression(Step.TS.PostExpr)"
+DefaultNameFormat = "ResStr(\"NI_SUBSTEPS\", \"STATEMENT_DEF_STEP_NAME\")"
+%FLG: Result = 4194304
+%INSTFLG: Result = 4194304
+%FLG: CodeTemplates = 24
+%TIMESTAMP = 1008353148
+%VERSION = "2.0.1.121"
+%FLG = 33554433
+%TYPE_FLG = 2
+
+[DEF, Statement.Substeps]
+%[0] = FlexCStep
+%TYPE: %[0] = "EditSubstep"
+
+[Statement.Substeps[0].TS]
+Adapter = "DLL Flexible Prototype Adapter"
+%INSTFLG: SData = 2097152
+%INSTOVRD: SData = 2097152
+
+[DEF, Statement.Substeps[0].TS]
+SData = "TYPE, FlexCStepAdditions"
+%FLG: SData = 2097152
+
+[Statement.Substeps[0].TS.SData.Call]
+LibPath = "CommonSubsteps.dll"
+Func = "EditStatementStep"
+%LO: Parms = [0]
+%HI: Parms = [3]
+
+[DEF, Statement.Substeps[0].TS.SData.Call.Parms]
+%[0] = "TYPE, FCParameter"
+%[1] = "TYPE, FCParameter"
+%[2] = "TYPE, FCParameter"
+%[3] = "TYPE, FCParameter"
+
+[Statement.Substeps[0].TS.SData.Call.Parms[0]]
+Name = "Return Value"
+Type = 3
+ObjType = 2
+
+[Statement.Substeps[0].TS.SData.Call.Parms[1]]
+Name = "context"
+Type = 4
+ArgVal = "ThisContext"
+ArgDisplayVal = "ThisContext"
+
+[Statement.Substeps[0].TS.SData.Call.Parms[2]]
+Name = "readOnly"
+ArgVal = "!CurrentUserHasPrivilege(\"EditSequenceFiles\")"
+ArgDisplayVal = "!CurrentUserHasPrivilege(\"EditSequenceFiles\")"
+
+[Statement.Substeps[0].TS.SData.Call.Parms[3]]
+Name = "changed"
+ObjType = 2
+NumPass = 1
+ArgVal = "RunState.InitialSelection.SelectedFile.ChangeCount"
+ArgDisplayVal = "RunState.InitialSelection.SelectedFile.ChangeCount"
+
+[Statement.Substeps[0].Result]
+%INSTOVRD: Common = 4194304
+
+[Statement.Substeps[0]]
+MenuName = "ResStr(\"NI_SUBSTEPS\", \"STATEMENT_EDIT_STEP_MENU_NAME\")"
+
+[DEF, Statement.Substeps[0]]
+%NAME = "Edit"
+
+[Statement.Menu]
+Adapter = "None Adapter"
+ItemName = "ResStr(\"NI_SUBSTEPS\", \"STATEMENT_MENU_ITEM_NAME\")"
+Group = "NI_Miscellaneous"
+
+[Statement.TS]
+Icon = "Statement.ico"
+%INSTFLG: SData = 2097152
+%INSTOVRD: SData = 7143449
+%INSTFLG: PostExpr = 1
+HasModule = False
+CanSpecifyModule = False
+
+[DEF, Statement.TS]
+SData = Obj
+%FLG: SData = 2097152
+
+[DEF, Statement.Result]
+Error = "TYPE, Error"
+Status = Str
+ReportText = Str
+Common = "TYPE, CommonResults"
+
+[Statement.Result]
+%FLG: Error = 4194304
+%INSTFLG: Error = 4194304
+%INSTOVRD: Error = 4194304
+%FLG: Status = 4194304
+%INSTFLG: Status = 4194304
+%INSTOVRD: Common = 4194304
+
+[DEF, Label]
+%LOCATION = "StepTypes"
+Substeps = "TYPE, StepTypeSubstepsArray"
+DescriptionFormat = "TYPE, StepTypeDescFmt"
+DefaultNameFormat = "TYPE, StepTypeDefNameFmt"
+Menu = "TYPE, StepTypeMenu"
+TS = "TYPE, TEInf"
+Result = Obj
+CodeTemplates = Str
+%FLG: CodeTemplates = 524288
+Description = Str
+%ROOT_TYPE = True
+
+[Label]
+%LO: Substeps = [0]
+%HI: Substeps = [0]
+DescriptionFormat = "Step.Description"
+DefaultNameFormat = "ResStr(\"NI_STEPTYPES\", \"LABEL_DEF_STEP_NAME\")"
+%FLG: Result = 4194304
+%INSTFLG: Result = 4194304
+%FLG: CodeTemplates = 24
+%TIMESTAMP = 1008353148
+%VERSION = "2.0.1.121"
+%FLG = 33554433
+%TYPE_FLG = 2
+
+[DEF, Label.Substeps]
+%[0] = FlexCStep
+%TYPE: %[0] = "EditSubstep"
+
+[Label.Substeps[0].TS]
+Adapter = "DLL Flexible Prototype Adapter"
+%INSTFLG: SData = 2097152
+%INSTOVRD: SData = 2097152
+
+[DEF, Label.Substeps[0].TS]
+SData = "TYPE, FlexCStepAdditions"
+%FLG: SData = 2097152
+
+[Label.Substeps[0].TS.SData.Call]
+LibPath = "CommonSubsteps.dll"
+Func = "EditLabelStep"
+%LO: Parms = [0]
+%HI: Parms = [3]
+
+[DEF, Label.Substeps[0].TS.SData.Call.Parms]
+%[0] = "TYPE, FCParameter"
+%[1] = "TYPE, FCParameter"
+%[2] = "TYPE, FCParameter"
+%[3] = "TYPE, FCParameter"
+
+[Label.Substeps[0].TS.SData.Call.Parms[0]]
+Name = "Return Value"
+Type = 3
+
+[Label.Substeps[0].TS.SData.Call.Parms[1]]
+Name = "object"
+Type = 4
+ArgVal = "ThisContext"
+ArgDisplayVal = "ThisContext"
+
+[Label.Substeps[0].TS.SData.Call.Parms[2]]
+Name = "readOnly"
+ArgVal = "!CurrentUserHasPrivilege(\"EditSequenceFiles\")"
+ArgDisplayVal = "!CurrentUserHasPrivilege(\"EditSequenceFiles\")"
+
+[Label.Substeps[0].TS.SData.Call.Parms[3]]
+Name = "changed"
+NumPass = 1
+ArgVal = "RunState.InitialSelection.SelectedFile.ChangeCount"
+ArgDisplayVal = "RunState.InitialSelection.SelectedFile.ChangeCount"
+
+[Label.Substeps[0].Result]
+%INSTOVRD: Common = 4194304
+
+[Label.Substeps[0]]
+MenuName = "ResStr(\"NI_SUBSTEPS\", \"LABEL_EDIT_STEP_MENU_NAME\")"
+
+[DEF, Label.Substeps[0]]
+%NAME = "Edit"
+
+[Label.Menu]
+Adapter = "None Adapter"
+ItemName = "ResStr(\"NI_STEPTYPES\", \"LABEL_MENU_ITEM_NAME\")"
+Group = "NI_Miscellaneous"
+
+[Label.TS]
+Adapter = "DLL Flexible Prototype Adapter"
+Icon = "label.ico"
+%INSTFLG: SData = 2097152
+%INSTOVRD: SData = 7143449
+NoResult = True
+%INSTFLG: PassAct = 1
+%INSTFLG: FailAct = 1
+%INSTFLG: PassActTarget = 1
+%INSTFLG: FailActTarget = 1
+HasModule = False
+CanSpecifyModule = False
+
+[DEF, Label.TS]
+SData = Obj
+%FLG: SData = 2097152
+
+[DEF, Label.Result]
+Error = "TYPE, Error"
+Status = Str
+ReportText = Str
+Common = "TYPE, CommonResults"
+
+[Label.Result]
+%FLG: Error = 4194304
+%INSTFLG: Error = 4194304
+%INSTOVRD: Error = 4194304
+%FLG: Status = 4194304
+%INSTFLG: Status = 4194304
+%INSTOVRD: Common = 4194304
+
+[DEF, Goto]
+%LOCATION = "StepTypes"
+Substeps = "TYPE, StepTypeSubstepsArray"
+DescriptionFormat = "TYPE, StepTypeDescFmt"
+DefaultNameFormat = "TYPE, StepTypeDefNameFmt"
+Menu = "TYPE, StepTypeMenu"
+TS = "TYPE, TEInf"
+Result = Obj
+CodeTemplates = Str
+%FLG: CodeTemplates = 524288
+%ROOT_TYPE = True
+
+[Goto]
+%LO: Substeps = [0]
+%HI: Substeps = [0]
+DescriptionFormat Line0001 = "ResStr(\"NI_SUBSTEPS\", \"GOTO_DESCR_PREFIX\", \"Goto\") + \" \" +  (Step.TS.CustTrueActTarget == \"\\\"<End>\\\"\" ? Re"
+DescriptionFormat Line0002 = "sStr(\"NI_SUBSTEPS\", \"END_STEP_NAME\", \"<END>\") : (Step.TS.CustTrueActTarget == \"\\\"<Cleanup>\\\"\" ? ResStr(\"NI_"
+DescriptionFormat Line0003 = "SUBSTEPS\", \"CLEANUP_STEP_NAME\", \"<CLEANUP>\") : LocalizeExpression(Step.TS.CustTrueActTarget)))"
+DefaultNameFormat = "ResStr(\"NI_SUBSTEPS\", \"GOTO_DEF_STEP_NAME\")"
+%FLG: Result = 4194304
+%INSTFLG: Result = 4194304
+%FLG: CodeTemplates = 24
+%TIMESTAMP = 1008353140
+%VERSION = "2.0.1.121"
+%FLG = 33554433
+%TYPE_FLG = 2
+
+[DEF, Goto.Substeps]
+%[0] = FlexCStep
+%TYPE: %[0] = "EditSubstep"
+
+[Goto.Substeps[0].TS]
+Adapter = "DLL Flexible Prototype Adapter"
+%INSTFLG: SData = 2097152
+%INSTOVRD: SData = 2097152
+
+[DEF, Goto.Substeps[0].TS]
+SData = "TYPE, FlexCStepAdditions"
+%FLG: SData = 2097152
+
+[Goto.Substeps[0].TS.SData.Call]
+LibPath = "CommonSubsteps.dll"
+Func = "EditGotoStep"
+%LO: Parms = [0]
+%HI: Parms = [3]
+
+[DEF, Goto.Substeps[0].TS.SData.Call.Parms]
+%[0] = "TYPE, FCParameter"
+%[1] = "TYPE, FCParameter"
+%[2] = "TYPE, FCParameter"
+%[3] = "TYPE, FCParameter"
+
+[Goto.Substeps[0].TS.SData.Call.Parms[0]]
+Name = "Return Value"
+Type = 3
+ObjType = 2
+
+[Goto.Substeps[0].TS.SData.Call.Parms[1]]
+Name = "object"
+Type = 4
+ArgVal = "ThisContext"
+ArgDisplayVal = "ThisContext"
+
+[Goto.Substeps[0].TS.SData.Call.Parms[2]]
+Name = "readOnly"
+ArgVal = "!CurrentUserHasPrivilege(\"EditSequenceFiles\")"
+ArgDisplayVal = "!CurrentUserHasPrivilege(\"EditSequenceFiles\")"
+
+[Goto.Substeps[0].TS.SData.Call.Parms[3]]
+Name = "changed"
+ObjType = 2
+NumPass = 1
+ArgVal = "RunState.InitialSelection.SelectedFile.ChangeCount"
+ArgDisplayVal = "RunState.InitialSelection.SelectedFile.ChangeCount"
+
+[Goto.Substeps[0].Result]
+%INSTOVRD: Common = 4194304
+
+[Goto.Substeps[0]]
+MenuName = "ResStr(\"NI_SUBSTEPS\", \"GOTO_EDIT_STEP_MENU_NAME\")"
+
+[DEF, Goto.Substeps[0]]
+%NAME = "Edit"
+
+[Goto.Menu]
+Adapter = "None Adapter"
+ItemName = "ResStr(\"NI_SUBSTEPS\", \"GOTO_MENU_ITEM_NAME\")"
+Group = "NI_Miscellaneous"
+
+[Goto.TS]
+Icon = "goto.ico"
+%INSTFLG: SData = 2097152
+%INSTOVRD: SData = 7143449
+%INSTFLG: PassAct = 1
+%INSTFLG: FailAct = 1
+%INSTFLG: PassActTarget = 1
+%INSTFLG: FailActTarget = 1
+CustExpr = "True"
+%INSTFLG: CustExpr = 1
+CustTrueAct = "Goto"
+%INSTFLG: CustTrueAct = 1
+%INSTFLG: CustFalseAct = 1
+CustTrueActTarget = "\"<End>\""
+%INSTFLG: CustTrueActTarget = 1
+%INSTFLG: LoopType = 1
+%INSTFLG: LoopWhile = 1
+%INSTFLG: LoopStatus = 1
+%INSTFLG: LoopIncrement = 1
+%INSTFLG: LoopInitialize = 1
+%INSTFLG: LoopOpt = 1
+HasModule = False
+CanSpecifyModule = False
+
+[DEF, Goto.TS]
+SData = Obj
+%FLG: SData = 2097152
+
+[DEF, Goto.Result]
+Error = "TYPE, Error"
+Status = Str
+ReportText = Str
+Common = "TYPE, CommonResults"
+
+[Goto.Result]
+%FLG: Error = 4194304
+%INSTFLG: Error = 4194304
+%INSTOVRD: Error = 4194304
+%FLG: Status = 4194304
+%INSTFLG: Status = 4194304
+%INSTOVRD: Common = 4194304
+
+[DEF, NI_Wait]
+%LOCATION = "StepTypes"
+DescriptionFormat = "TYPE, StepTypeDescFmt"
+DefaultNameFormat = "TYPE, StepTypeDefNameFmt"
+Menu = "TYPE, StepTypeMenu"
+Substeps = "TYPE, StepTypeSubstepsArray"
+%FLG: Substeps = 2621440
+CodeTemplates = Str
+%FLG: CodeTemplates = 524288
+TS = "TYPE, TEInf"
+Result = Obj
+%FLG: Result = 2097152
+TimeoutEnabled = Bool
+ErrorOnTimeout = Bool
+ThreadRefExpr = Str
+SeqCallName = Str
+SeqCallStepGroupIdx = Num
+TimeoutExpr = Str
+WaitForTarget = Num
+TimeExpr = Str
+ExecutionRefExpr = Str
+SpecifyBySeqCall = Bool
+%ROOT_TYPE = True
+
+[NI_Wait]
+DescriptionFormat Line0001 = "ResStr(\"NI_WAIT_STEP_TYPE_TARGET_NAME\", Str(Step.WaitForTarget)) +\n\"(\" +\n((Step.WaitForTarget == 0)?\nLocalizeExpr"
+DescriptionFormat Line0002 = "ession(Step.TimeExpr):\n(Step.WaitForTarget == 1)?\nLocalizeExpression(Step.TimeExpr):\n(Step.WaitForTarget == 2)?\n(Ste"
+DescriptionFormat Line0003 = "p.SpecifyBySeqCall ?((Step.SeqCallName == \"\")?ResStr(\"NI_WAIT_STEP_TYPE\", \"UNSPECIFIED\"):Step.SeqCallName + \" (\""
+DescriptionFormat Line0004 = " + ResStr(\"EXECUTION PHASE\", Str(Step.SeqCallStepGroupIdx)) + \")\"):LocalizeExpression(Step.ThreadRefExpr)):\n(Step.W"
+DescriptionFormat Line0005 = "aitForTarget == 3)?\n(Step.SpecifyBySeqCall ?((Step.SeqCallName == \"\")?ResStr(\"NI_WAIT_STEP_TYPE\", \"UNSPECIFIED\"):"
+DescriptionFormat Line0006 = "Step.SeqCallName + \" (\" + ResStr(\"EXECUTION PHASE\", Str(Step.SeqCallStepGroupIdx)) + \")\"):LocalizeExpression(Step."
+DescriptionFormat Line0007 = "ExecutionRefExpr)):\n\"\")\n+ \")\""
+DefaultNameFormat = "ResStr(\"NI_WAIT_STEP_TYPE\", \"DEF_STEP_NAME\")"
+%LO: Substeps = [0]
+%HI: Substeps = [1]
+CodeTemplates = "Default_Template"
+%FLG: CodeTemplates = 24
+%FLG: Result = 4194304
+%INSTFLG: Result = 6291456
+ErrorOnTimeout = True
+SpecifyBySeqCall = True
+%TIMESTAMP = 1008353059
+%VERSION = "2.0.1.121"
+%FLG = 33554433
+%TYPE_FLG = 2
+
+[NI_Wait.Menu]
+Adapter = "None Adapter"
+ItemName = "ResStr(\"NI_WAIT_STEP_TYPE\", \"MENU_ITEM_NAME\")"
+Group = "NI_NonAdvSynchronization"
+
+[DEF, NI_Wait.Substeps]
+%[0] = FlexCStep
+%TYPE: %[0] = "PostSubstep"
+%[1] = FlexCStep
+%TYPE: %[1] = "EditSubstep"
+
+[NI_Wait.Substeps[0].TS]
+Adapter = "DLL Flexible Prototype Adapter"
+%INSTFLG: SData = 2097152
+%INSTOVRD: SData = 2097152
+
+[DEF, NI_Wait.Substeps[0].TS]
+SData = "TYPE, FlexCStepAdditions"
+%FLG: SData = 2097152
+
+[NI_Wait.Substeps[0].TS.SData.Call]
+LibPath = "SyncSteps.dll"
+Func = "DoWaitStep"
+Conv = 0
+%LO: Parms = [0]
+%HI: Parms = [1]
+
+[DEF, NI_Wait.Substeps[0].TS.SData.Call.Parms]
+%[0] = "TYPE, FCParameter"
+%[1] = "TYPE, FCParameter"
+
+[NI_Wait.Substeps[0].TS.SData.Call.Parms[0]]
+Name = "Return Value"
+Type = 3
+
+[NI_Wait.Substeps[0].TS.SData.Call.Parms[1]]
+Name = "seqContext"
+Type = 4
+ArgVal = "ThisContext"
+ArgDisplayVal = "ThisContext"
+
+[NI_Wait.Substeps[0].Result]
+%INSTOVRD: Common = 4194304
+
+[DEF, NI_Wait.Substeps[0]]
+%NAME = "Post"
+
+[NI_Wait.Substeps[1].TS]
+Adapter = "DLL Flexible Prototype Adapter"
+%INSTFLG: SData = 2097152
+%INSTOVRD: SData = 2097152
+
+[DEF, NI_Wait.Substeps[1].TS]
+SData = "TYPE, FlexCStepAdditions"
+%FLG: SData = 2097152
+
+[NI_Wait.Substeps[1].TS.SData.Call]
+LibPath = "SyncSteps.dll"
+Func = "EditWaitStep"
+Conv = 0
+%LO: Parms = [0]
+%HI: Parms = [3]
+
+[DEF, NI_Wait.Substeps[1].TS.SData.Call.Parms]
+%[0] = "TYPE, FCParameter"
+%[1] = "TYPE, FCParameter"
+%[2] = "TYPE, FCParameter"
+%[3] = "TYPE, FCParameter"
+
+[NI_Wait.Substeps[1].TS.SData.Call.Parms[0]]
+Name = "Return Value"
+Type = 3
+
+[NI_Wait.Substeps[1].TS.SData.Call.Parms[1]]
+Name = "seqContextDisp"
+Type = 4
+ArgVal = "ThisContext"
+ArgDisplayVal = "ThisContext"
+
+[NI_Wait.Substeps[1].TS.SData.Call.Parms[2]]
+Name = "readOnly"
+ArgVal = "!CurrentUserHasPrivilege(\"EditSequenceFiles\")"
+ArgDisplayVal = "!CurrentUserHasPrivilege(\"EditSequenceFiles\")"
+
+[NI_Wait.Substeps[1].TS.SData.Call.Parms[3]]
+Name = "changeCount"
+NumPass = 1
+ArgVal = "RunState.InitialSelection.SelectedFile.ChangeCount"
+ArgDisplayVal = "RunState.InitialSelection.SelectedFile.ChangeCount"
+
+[NI_Wait.Substeps[1].Result]
+%INSTOVRD: Common = 4194304
+
+[NI_Wait.Substeps[1]]
+MenuName = "ResStr(\"NI_WAIT_STEP_TYPE\", \"EDIT_STEP_MENU_NAME\")"
+
+[DEF, NI_Wait.Substeps[1]]
+%NAME = "Edit"
+
+[NI_Wait.TS]
+Icon = "ni_hourglass.ico"
+%INSTFLG: SData = 2097152
+%INSTOVRD: SData = 7143449
+BatchSyncOpt = 2
+
+[DEF, NI_Wait.TS]
+SData = Obj
+%FLG: SData = 2097152
+
+[DEF, NI_Wait.Result]
+Error = "TYPE, Error"
+Status = Str
+ReportText = Str
+Common = "TYPE, CommonResults"
+
+[NI_Wait.Result]
+%FLG: Error = 4194304
+%INSTFLG: Error = 4194304
+%INSTOVRD: Error = 4194304
+%FLG: Status = 4194304
+%INSTFLG: Status = 4194304
+%INSTOVRD: Common = 4194304
+
+[DEF, PostSubstep]
+%LOCATION = "StepTypes"
+DescriptionFormat = "TYPE, StepTypeDescFmt"
+DefaultNameFormat = "TYPE, StepTypeDefNameFmt"
+Menu = "TYPE, StepTypeMenu"
+Substeps = "TYPE, StepTypeSubstepsArray"
+CodeTemplates = Str
+%FLG: CodeTemplates = 524288
+TS = "TYPE, TEInf"
+Result = Obj
+%ROOT_TYPE = True
+
+[PostSubstep]
+DefaultNameFormat = "ResStr(\"NI_STEPTYPES\", \"POST_DEF_SUBSTEP_NAME\")"
+CodeTemplates = "Default_Template"
+%FLG: CodeTemplates = 24
+%FLG: Result = 4194304
+%INSTFLG: Result = 4194304
+%TIMESTAMP = 1018468148
+%VERSION = "2.0.1.121"
+%FLG = 37748737
+%TYPE_FLG = 2
+
+[PostSubstep.Menu]
+CanBeSubstepType = True
+CanOnlyBeSubstepType = True
+ItemName = "ResStr(\"NI_STEPTYPES\", \"POST_SUBSTEP_MENU_ITEM_NAME\")"
+Group = "ExecSubsteps"
+
+[DEF, PostSubstep.TS]
+SData = Obj
+%FLG: SData = 2097152
+
+[PostSubstep.TS]
+%INSTFLG: SData = 2097152
+%INSTOVRD: SData = 7274521
+
+[DEF, PostSubstep.Result]
+Error = "TYPE, Error"
+Status = Str
+ReportText = Str
+Common = "TYPE, CommonResults"
+
+[PostSubstep.Result]
+%FLG: Error = 4194304
+%INSTFLG: Error = 4194304
+%INSTOVRD: Error = 4194304
+%FLG: Status = 4194304
+%INSTFLG: Status = 4194304
+
+[DEF, StepTypeDescFmt]
+%LOCATION = "StdTypes"
+%ROOT_TYPE = True
+
+[%OBJECTS]
+StepTypeDescFmt = "\"%ModuleDescription\""
+StepTypeDefNameFmt = "\"\""
+
+[StepTypeDescFmt]
+%TIMESTAMP = 1018468148
+%VERSION = "2.0.1.121"
+%FLG = 37748760
+%INSTFLG = 524312
+%INSTOVRD = 524312
+
+[DEF, StepTypeDefNameFmt]
+%LOCATION = "StdTypes"
+%ROOT_TYPE = True
+
+[StepTypeDefNameFmt]
+%TIMESTAMP = 1018468148
+%VERSION = "2.0.1.121"
+%FLG = 37748760
+%INSTFLG = 524312
+%INSTOVRD = 524312
+
+[DEF, UUT]
+%LOCATION = "UserTypes"
+SerialNumber = Str
+UUTLoopIndex = Num
+CriticalFailureStack = Objs
+BatchSerialNumber = Str
+TestSocketIndex = Num
+%ROOT_TYPE = True
+
+[DEF, UUT.CriticalFailureStack]
+%EPTYPE = "TYPE, NI_CriticalFailureStackEntry"
+
+[UUT]
+TestSocketIndex = -1
+%TIMESTAMP = 1008353140
+%VERSION = "2.0.1.121"
+%FLG = 33554432
+
+[DEF, NI_CriticalFailureStackEntry]
+%LOCATION = "UserTypes"
+StepName = Str
+SequenceName = Str
+SequenceFileName = Str
+ResultId = Num
+%ROOT_TYPE = True
+
+[NI_CriticalFailureStackEntry]
+%TIMESTAMP = 1008353140
+%VERSION = "2.0.1.121"
+%FLG = 33554432 

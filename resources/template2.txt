@@ -1,0 +1,17 @@
+; Analogbus
+ABa1	  =  ABUS!ABa1
+ABa2	  =  ABUS!ABa2
+ABb1	  =  ABUS!ABb1
+ABb2	  =  ABUS!ABb2
+ABc1	  =  ABUS!ABc1
+ABc2	  =  ABUS!ABc2
+ABd1	  =  ABUS!ABd1
+ABd2	  =  ABUS!ABd2
+
+; the analog bus entry is mandatory if the switch manager or EGTSL is used
+[device->ABUS]
+Description		= "Analog Bus"
+Type			= AB
+
+;
+; EOF

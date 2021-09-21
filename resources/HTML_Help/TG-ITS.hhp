@@ -1,0 +1,23 @@
+[OPTIONS]
+Compatibility=1.1 or later
+Compiled file=TG-ITS.chm
+Contents file=TG-ITS Table of Contents.hhc
+Default Font=Arial,9,0
+Display compile progress=Yes
+Error log file=log.log
+Full-text search=Yes
+Index file=TG-ITS.hhk
+Language=0x407 Deutsch (Deutschland)
+Title=TG-ITS Template Generator
+
+
+[FILES]
+_0_1_wichtige_informationen.htm
+_0_6_options.htm
+_0_2_scan.htm
+_0_3_change.htm
+_0_4_addmanually.htm
+_0_5_export.htm
+
+[INFOTYPES]
+

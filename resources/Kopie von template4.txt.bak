@@ -1,0 +1,298 @@
+[DEF, %OBJECTS]
+SF = SequenceFileData
+Path = PathValue
+Action = StepType
+StepTypeSubstepsArray = Objs
+StepTypeDescFmt = Str
+StepTypeDefNameFmt = Str
+StepTypeMenu = Obj
+TEInf = Obj
+Error = Obj
+CommonResults = Obj
+FlexCStepAdditions = Obj
+FCParameter = FCParameter
+UUT = Obj
+NI_CriticalFailureStackEntry = Obj
+EditSubstep = StepType
+NoneStepAdditions = Obj
+Statement = StepType
+
+[DEF, SF]
+Seq = Objs
+FileGlobalDefaults = Obj
+ModelFile = "TYPE, Path"
+LoadOpt = Str
+UnloadOpt = Str
+Version = Str
+BatchSync = Num
+SFGlobalsScope = Num
+Type = Num
+ModelOption = Num
+%NAME = "Data"
+
+[SF]
+%LO: Seq = [0]
+%HI: Seq = [6]
+%FLG: ModelFile = 8
+LoadOpt = "UseStepLoadOpt"
+%FLG: LoadOpt = 8
+UnloadOpt = "UseStepUnloadOpt"
+%FLG: UnloadOpt = 8
+Version = "0.0.0.0"
+%FLG: Version = 8
+BatchSync = 1
+%FLG: BatchSync = 8
+%FLG: SFGlobalsScope = 8
+%FLG: Type = 8
+%FLG: ModelOption = 8
+
+[DEF, SF.Seq]
+%[0] = Sequence
+%[1] = Sequence
+%[2] = Sequence
+%[3] = Sequence
+%[4] = Sequence
+%[5] = Sequence
+%[6] = Sequence
+
+[DEF, SF.Seq[0]]
+Parameters = Obj
+Locals = Obj
+Main = Objs
+Setup = Objs
+Cleanup = Objs
+GotoCleanupOnFail = Bool
+RecordResults = Bool
+RTS = Obj
+%NAME = "MainSequence"
+
+[SF.Seq[0]]
+%FLG: Parameters = 262144
+%FLG: GotoCleanupOnFail = 8
+RecordResults = True
+%FLG: RecordResults = 8
+%FLG: RTS = 262152
+
+[DEF, SF.Seq[0].Locals]
+ResultList = Objs
+
+[DEF, SF.Seq[0].Locals.ResultList]
+%EPTYPE = TEResult
+
+[DEF, SF.Seq[0].RTS]
+Type = Num
+OptimizeNonReentrantCalls = Bool
+EPNameExpr = Str
+EPEnabledExpr = Str
+EPMenuHint = Str
+EPIgnoreClient = Bool
+EPInitiallyHidden = Bool
+EPCheckToSaveTitledFile = Bool
+ShowEPAlways = Bool
+ShowEPForFileWin = Bool
+ShowEPForExeWin = Bool
+ShowEPForEditorOnly = Bool
+AllowIntExeOfEP = Bool
+CopyStepsOnOverriding = Bool
+Priority = Num
+
+[SF.Seq[0].RTS]
+OptimizeNonReentrantCalls = True
+EPNameExpr = "\"Unnamed Entry Point\""
+EPEnabledExpr = "True"
+EPCheckToSaveTitledFile = True
+ShowEPForFileWin = True
+CopyStepsOnOverriding = True
+Priority = 2953567917
+
+[DEF, SF.Seq[1]]
+Parameters = Obj
+Locals = Obj
+Main = Objs
+Setup = Objs
+Cleanup = Objs
+GotoCleanupOnFail = Bool
+StoreResults = Bool
+RecordResults = Bool
+RTS = Obj
+%NAME = "PreUUT"
+
+[DEF, SF.Seq[1].Parameters]
+ContinueTesting = Bool
+UUT = "TYPE, UUT"
+
+[SF.Seq[1].Parameters]
+ContinueTesting = True
+%FLG: ContinueTesting = 4
+%FLG: UUT = 132
+
+[SF.Seq[1]]
+%FLG: Parameters = 262144
+%FLG: GotoCleanupOnFail = 8
+StoreResults = True
+%FLG: RecordResults = 8
+%FLG: RTS = 262152
+%COMMENT Line0001 = "Displays a dialog box in which the operator enters the UUTserial number.  Override this in client file to change or repl"
+%COMMENT Line0002 = "ace this action."
+
+[DEF, SF.Seq[1].RTS]
+Type = Num
+EPNameExpr = Str
+EPEnabledExpr = Str
+EPMenuHint = Str
+EPIgnoreClient = Bool
+EPInitiallyHidden = Bool
+EPCheckToSaveTitledFile = Bool
+ShowEPForFileWin = Bool
+ShowEPForExeWin = Bool
+CopyStepsOnOverriding = Bool
+OptimizeNonReentrantCalls = Bool
+Priority = Num
+ShowEPAlways = Bool
+ShowEPForEditorOnly = Bool
+AllowIntExeOfEP = Bool
+
+[SF.Seq[1].RTS]
+EPCheckToSaveTitledFile = True
+ShowEPForFileWin = True
+OptimizeNonReentrantCalls = True
+Priority = 2953567917
+
+[DEF, SF.Seq[2]]
+Parameters = Obj
+Locals = Obj
+Main = Objs
+Setup = Objs
+Cleanup = Objs
+GotoCleanupOnFail = Bool
+StoreResults = Bool
+RecordResults = Bool
+RTS = Obj
+%NAME = "PostUUT"
+
+[DEF, SF.Seq[2].Parameters]
+Result = Obj
+UUT = "TYPE, UUT"
+
+[SF.Seq[2].Parameters]
+%FLG: Result = 132
+%FLG: UUT = 132
+
+[SF.Seq[2]]
+%FLG: Parameters = 262144
+%FLG: GotoCleanupOnFail = 8
+StoreResults = True
+%FLG: RecordResults = 8
+%FLG: RTS = 262152
+%COMMENT = "Displays a pass, fail, error, or terminated banner. Override this in client file to change or replace this action."
+
+[DEF, SF.Seq[2].RTS]
+Type = Num
+EPNameExpr = Str
+EPEnabledExpr = Str
+EPMenuHint = Str
+EPIgnoreClient = Bool
+EPInitiallyHidden = Bool
+EPCheckToSaveTitledFile = Bool
+ShowEPForFileWin = Bool
+ShowEPForExeWin = Bool
+CopyStepsOnOverriding = Bool
+OptimizeNonReentrantCalls = Bool
+Priority = Num
+ShowEPAlways = Bool
+ShowEPForEditorOnly = Bool
+AllowIntExeOfEP = Bool
+
+[SF.Seq[2].RTS]
+EPCheckToSaveTitledFile = True
+ShowEPForFileWin = True
+OptimizeNonReentrantCalls = True
+Priority = 2953567917
+
+[DEF, SF.Seq[3]]
+Parameters = Obj
+Locals = Obj
+Main = Objs
+Setup = Objs
+Cleanup = Objs
+GotoCleanupOnFail = Bool
+StoreResults = Bool
+RecordResults = Bool
+RTS = Obj
+%NAME = "PreUUTLoop"
+
+[SF.Seq[3]]
+%FLG: Parameters = 262144
+%FLG: GotoCleanupOnFail = 8
+StoreResults = True
+%FLG: RecordResults = 8
+%FLG: RTS = 262152
+%COMMENT Line0001 = "Test UUTs calls this before looping on UUTs.  Is empty in model file.  Override this in the client file to perform an ac"
+%COMMENT Line0002 = "tion before any UUTs are tested."
+
+[DEF, SF.Seq[3].RTS]
+Type = Num
+EPNameExpr = Str
+EPEnabledExpr = Str
+EPMenuHint = Str
+EPIgnoreClient = Bool
+EPInitiallyHidden = Bool
+EPCheckToSaveTitledFile = Bool
+ShowEPForFileWin = Bool
+ShowEPForExeWin = Bool
+CopyStepsOnOverriding = Bool
+OptimizeNonReentrantCalls = Bool
+Priority = Num
+ShowEPAlways = Bool
+ShowEPForEditorOnly = Bool
+AllowIntExeOfEP = Bool
+
+[SF.Seq[3].RTS]
+EPCheckToSaveTitledFile = True
+ShowEPForFileWin = True
+OptimizeNonReentrantCalls = True
+Priority = 2953567917
+
+[DEF, SF.Seq[4]]
+Parameters = Obj
+Locals = Obj
+Main = Objs
+Setup = Objs
+Cleanup = Objs
+GotoCleanupOnFail = Bool
+StoreResults = Bool
+RecordResults = Bool
+RTS = Obj
+%NAME = "PostUUTLoop"
+
+[SF.Seq[4]]
+%FLG: Parameters = 262144
+%FLG: GotoCleanupOnFail = 8
+StoreResults = True
+%FLG: RecordResults = 8
+%FLG: RTS = 262152
+%COMMENT Line0001 = "Test UUTs calls this after looping on UUTs.  Is empty in model file.  Override this in the client file to perform an act"
+%COMMENT Line0002 = "ion after all UUTs are tested."
+
+[DEF, SF.Seq[4].RTS]
+Type = Num
+EPNameExpr = Str
+EPEnabledExpr = Str
+EPMenuHint = Str
+EPIgnoreClient = Bool
+EPInitiallyHidden = Bool
+EPCheckToSaveTitledFile = Bool
+ShowEPForFileWin = Bool
+ShowEPForExeWin = Bool
+CopyStepsOnOverriding = Bool
+OptimizeNonReentrantCalls = Bool
+Priority = Num
+ShowEPAlways = Bool
+ShowEPForEditorOnly = Bool
+AllowIntExeOfEP = Bool
+
+[SF.Seq[4].RTS]
+EPCheckToSaveTitledFile = True
+ShowEPForFileWin = True
+OptimizeNonReentrantCalls = True
+Priority = 2953567917

@@ -1,0 +1,3 @@
+; Note: the self test DLL and prefix keywords must be removed for the 
+;       first TS-PSAM module, because it is already tested in the
+;       basic self test.

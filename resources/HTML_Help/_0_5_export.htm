@@ -1,0 +1,39 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+<HTML>
+<HEAD>
+<meta name="GENERATOR" content="Microsoft&reg; HTML Help Workshop 4.1">
+<Title>Export data</Title>
+<link href="swits_help.css" rel="stylesheet" type="text/css">
+</HEAD>
+<BODY>
+<h1>Export data and create init- and sequence-files</h1>
+<p>
+In order to store the scanned and respectively edited informations of the present hardware you have to export the data. On the bottom of the main window are three check-boxes set. They show which files are going to be created.  
+<br><br><img src="images/image09.jpg"><br><br>
+</p>
+<p>
+To start the export process, select in the menu bar <code><b>File -> Export physical.ini</b></code>.
+<br><br><img src="images/image08.jpg"><br><br>
+In the following panel you can select the devices, that are supposed to be registered into the file. All Rohde & Schwarz devices are enabled. Click on the entry to disable the device. Click on the <code><b>Export</b></code> button to save the enabled files onto hard disk. Type file name in file select popups and press save.
+<br><br><img src="images/image10.jpg">
+</p>
+</p>
+
+<p class="omred"><b>Note</b><br>
+To append information about the device's system-channels to the "physical.ini" enable the check-box <code><b>Export System I/O Channels</b></code>.
+<br>
+If the checkbox <code><b>Export all Application-Channels</b></code> is marked the respective entries in the "application.ini" are not left on some samples for logical names, but list all possible channels.
+<br>
+The check box <code><b>Export ABus</b></code> must be enabled if the switch manager or EGTSL is used.<br>
+The check box <code><b>Enable auto coupling for TS-PMB</b></code> should be enabled if the switch manager or EGTSL is used.<br><br>
+</p>
+<p class="omblue"><b>Hint</b><br>
+If the <code><b>sample.seq</b></code> is marked, the both init-files are needed, too.  
+</p>
+<p class="omblue"><b>Hint</b><br>
+Press <code><b>CTRL</b></code> and <code><b>S</b></code> to start the descripted process above.
+</p>
+
+</p>
+</BODY>
+</HTML>
